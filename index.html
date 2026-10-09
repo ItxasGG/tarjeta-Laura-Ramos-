@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Laura Ramos | Editora jefe de AUREA</title>
-  <meta name="description" content="Tarjeta de presentación digital de Laura Ramos, Editora jefe de AUREA. Cada portada, una declaración de estilo.">
+  <meta name="description" content="Tarjeta de presentación digital de Laura Ramos, Editora jefe de AUREA. Diseño Liquid Glass y alta costura.">
 
   <!-- Open Graph / Meta para compartir en WhatsApp, iMessage y redes -->
   <meta property="og:title" content="Laura Ramos | Editora jefe de AUREA">
@@ -12,42 +12,62 @@
   <meta property="og:type" content="profile">
   <meta property="og:image" content="foto.jpg">
 
-  <!-- Tipografías de alta gama editorial: Cormorant Garamond & Plus Jakarta Sans -->
+  <!-- Tipografía ultra-moderna estilo Apple UI & Diseño de Producto (Inter & Plus Jakarta Sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     /* ==========================================================================
-       VARIABLES Y PALETA DE COLOR EDITORIAL (Estilo Lujo & Alta Dirección AUREA)
+       SISTEMA DE DISEÑO "LIQUID GLASS" (Inspirado en Apple Vision Pro & Neumorphic Glass)
+       Efecto de vidrio líquido esmerilado, luces especulares y canvas técnico cuadriculado
        ========================================================================== */
     :root {
-      --bg-dark: #0d0c0e;
-      --bg-surface: #141317;
-      --card-bg: rgba(22, 21, 26, 0.88);
-      --card-border: rgba(226, 192, 126, 0.22);
-      
-      --gold-primary: #d4af37;
-      --gold-light: #f3e5b8;
-      --gold-champagne: #e8d39c;
-      --gold-gradient: linear-gradient(135deg, #f5e2b3 0%, #d4af37 50%, #aa8222 100%);
-      --gold-gradient-soft: linear-gradient(135deg, rgba(243, 229, 184, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%);
+      /* Fondo y rejilla */
+      --canvas-bg: #eceef1;
+      --grid-line: rgba(17, 24, 39, 0.05);
 
-      --text-primary: #fcfbf9;
-      --text-secondary: #c2beb5;
-      --text-muted: #8c8880;
+      /* Vidrio Líquido (Liquid Glass) */
+      --glass-base: rgba(255, 255, 255, 0.68);
+      --glass-base-hover: rgba(255, 255, 255, 0.82);
+      --glass-pill: rgba(255, 255, 255, 0.75);
+      --glass-border: rgba(255, 255, 255, 0.95);
+      --glass-subtle-border: rgba(255, 255, 255, 0.6);
 
-      --btn-bg: rgba(255, 255, 255, 0.04);
-      --btn-border: rgba(255, 255, 255, 0.08);
-      --btn-hover-border: rgba(212, 175, 55, 0.45);
+      /* Sombras volumétricas 3D de vidrio */
+      --glass-shadow: 
+        0 24px 48px -12px rgba(30, 41, 59, 0.12),
+        0 8px 20px -6px rgba(30, 41, 59, 0.06),
+        inset 0 1.5px 1px 0 rgba(255, 255, 255, 1),
+        inset 0 -1.5px 2px 0 rgba(0, 0, 0, 0.04);
 
-      --radius-sm: 10px;
-      --radius-md: 16px;
-      --radius-lg: 24px;
+      --pill-shadow: 
+        0 10px 24px -4px rgba(30, 41, 59, 0.08),
+        0 4px 8px -2px rgba(30, 41, 59, 0.04),
+        inset 0 1.5px 1px 0 rgba(255, 255, 255, 1),
+        inset 0 -1px 2px 0 rgba(0, 0, 0, 0.03);
+
+      --pill-shadow-active:
+        0 4px 12px -2px rgba(30, 41, 59, 0.08),
+        inset 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+      /* Colores de acento orgánicos (como en la referencia) */
+      --accent-green: #10b981;
+      --accent-green-glow: rgba(16, 185, 129, 0.35);
+      --accent-coral: #f43f5e;
+      --accent-blue: #0284c7;
+      --accent-figma-purple: #8b5cf6;
+
+      /* Tipografía de alto contraste */
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --text-light: #94a3b8;
+
+      /* Radios de curvatura orgánica */
       --radius-full: 9999px;
-
-      --shadow-ambient: 0 25px 60px -15px rgba(0, 0, 0, 0.85);
-      --shadow-gold: 0 8px 25px rgba(212, 175, 55, 0.25);
+      --radius-card: 36px;
+      --radius-item: 24px;
+      --radius-sm: 16px;
     }
 
     * {
@@ -58,59 +78,100 @@
     }
 
     body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: var(--bg-dark);
-      background-image: 
-        radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.12) 0%, transparent 60%),
-        radial-gradient(circle at 10% 90%, rgba(170, 130, 34, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 90% 40%, rgba(243, 229, 184, 0.05) 0%, transparent 40%);
-      color: var(--text-primary);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+      background-color: var(--canvas-bg);
+      color: var(--text-main);
       min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 24px 16px;
+      position: relative;
+      overflow-x: hidden;
       line-height: 1.5;
     }
 
-    /* Fondo editorial con grano sutil de lujo */
-    .bg-grain {
+    /* ==========================================================================
+       CANVAS TÉCNICO DE FONDO (Cuadrícula fina milimétrica estilo Figma / Apple)
+       ========================================================================== */
+    .canvas-grid {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      inset: 0;
       pointer-events: none;
-      opacity: 0.025;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
       z-index: 0;
     }
 
+    /* Luces y esferas de refracción detrás del vidrio líquido (efecto Liquid Glass) */
+    .ambient-refractor {
+      position: fixed;
+      pointer-events: none;
+      border-radius: 50%;
+      filter: blur(55px);
+      opacity: 0.65;
+      z-index: 0;
+    }
+
+    .refractor-1 {
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, #34d399 0%, #10b981 70%, transparent 100%);
+      top: 8%;
+      left: calc(50% - 220px);
+      animation: floatRefractor 12s ease-in-out infinite alternate;
+    }
+
+    .refractor-2 {
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(circle, #38bdf8 0%, #0284c7 70%, transparent 100%);
+      bottom: 12%;
+      right: calc(50% - 230px);
+      animation: floatRefractor 14s ease-in-out infinite alternate-reverse;
+    }
+
+    .refractor-3 {
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, #f43f5e 0%, #fb923c 70%, transparent 100%);
+      top: 40%;
+      right: calc(50% - 210px);
+      opacity: 0.45;
+    }
+
+    @keyframes floatRefractor {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(25px, 20px) scale(1.12); }
+    }
+
     /* ==========================================================================
-       CONTENEDOR DE LA TARJETA DIGITAL
+       TARJETA PRINCIPAL "LIQUID GLASS"
        ========================================================================== */
-    .card-container {
+    .liquid-card {
       position: relative;
       z-index: 1;
       width: 100%;
       max-width: 420px;
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-ambient);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      padding: 32px 24px;
+      background: var(--glass-base);
+      backdrop-filter: blur(34px) saturate(180%);
+      -webkit-backdrop-filter: blur(34px) saturate(180%);
+      border: 1.5px solid var(--glass-border);
+      border-radius: var(--radius-card);
+      box-shadow: var(--glass-shadow);
+      padding: 28px 22px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      animation: cardEntrance 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      animation: cardEntrance 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
     @keyframes cardEntrance {
       from {
         opacity: 0;
-        transform: translateY(22px) scale(0.97);
+        transform: translateY(24px) scale(0.97);
       }
       to {
         opacity: 1;
@@ -118,8 +179,10 @@
       }
     }
 
-    /* Barra superior de herramientas y cabecera */
-    .card-topbar {
+    /* ==========================================================================
+       BARRA SUPERIOR (Cápsulas y botones de vidrio líquido estilo Apple)
+       ========================================================================== */
+    .top-toolbar {
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -127,168 +190,199 @@
       margin-bottom: 24px;
     }
 
-    .brand-tag {
+    /* Cápsula de retroceso / badge de marca con bisel de cristal */
+    .pill-badge {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      padding: 5px 12px;
-      border-radius: var(--radius-full);
-      background: rgba(212, 175, 55, 0.08);
-      border: 1px solid rgba(212, 175, 55, 0.25);
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--gold-champagne);
-    }
-
-    .brand-tag-dot {
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: var(--gold-primary);
-      box-shadow: 0 0 8px var(--gold-primary);
-    }
-
-    .top-actions {
-      display: flex;
       gap: 8px;
-    }
-
-    .icon-action-btn {
-      width: 36px;
-      height: 36px;
+      padding: 8px 16px;
+      background: var(--glass-pill);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1.2px solid var(--glass-border);
       border-radius: var(--radius-full);
-      background: var(--btn-bg);
-      border: 1px solid var(--btn-border);
-      color: var(--text-secondary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
+      box-shadow: var(--pill-shadow);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-main);
       transition: all 0.25s ease;
     }
 
-    .icon-action-btn:hover,
-    .icon-action-btn:active {
-      color: var(--gold-champagne);
-      border-color: var(--btn-hover-border);
-      background: rgba(212, 175, 55, 0.12);
-      transform: translateY(-2px);
+    .pill-badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent-green);
+      box-shadow: 0 0 10px var(--accent-green);
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    /* Botón circular de vidrio líquido con relieve 3D */
+    .liquid-circle-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--glass-pill);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1.2px solid var(--glass-border);
+      box-shadow: var(--pill-shadow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-main);
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+
+    .liquid-circle-btn:hover {
+      transform: translateY(-2px) scale(1.04);
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 
+        0 14px 28px -4px rgba(30, 41, 59, 0.12),
+        inset 0 1.5px 1px 0 rgba(255, 255, 255, 1);
+      color: #000000;
+    }
+
+    .liquid-circle-btn:active {
+      transform: translateY(1px) scale(0.96);
+      box-shadow: var(--pill-shadow-active);
     }
 
     /* ==========================================================================
-       AVATAR / CÍRCULO CON INICIALES "LR"
+       AVATAR DE LAURA CON ANILLOS CONCÉNTRICOS DE VIDRIO (Estilo Apo Branding)
        ========================================================================== */
-    .avatar-wrapper {
+    .avatar-pod-wrapper {
       position: relative;
-      margin-bottom: 18px;
-    }
-
-    .avatar-circle {
-      width: 114px;
-      height: 114px;
-      border-radius: 50%;
-      background: linear-gradient(145deg, #1f1d24, #121115);
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
-      padding: 3px;
-      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.75), 0 0 25px rgba(212, 175, 55, 0.22);
+      margin-bottom: 20px;
     }
 
-    /* Anillo exterior con gradiente dorado fino */
-    .avatar-circle::before {
-      content: '';
+    /* Anillo exterior translúcido concéntrico (como en la captura del diseño) */
+    .concentric-ring {
       position: absolute;
-      inset: -2px;
+      width: 148px;
+      height: 148px;
       border-radius: 50%;
-      background: var(--gold-gradient);
-      z-index: 0;
-      opacity: 0.85;
+      border: 1px solid rgba(17, 24, 39, 0.08);
+      pointer-events: none;
     }
 
-    .avatar-inner {
+    .avatar-glass-orb {
+      width: 122px;
+      height: 122px;
+      border-radius: 50%;
+      background: var(--glass-pill);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 2px solid var(--glass-border);
+      box-shadow: 
+        0 20px 35px -8px rgba(15, 23, 42, 0.16),
+        0 4px 10px rgba(15, 23, 42, 0.04),
+        inset 0 2px 2px 0 rgba(255, 255, 255, 1),
+        inset 0 -2px 3px 0 rgba(0, 0, 0, 0.05);
+      padding: 4px;
       position: relative;
       z-index: 1;
+    }
+
+    .avatar-img-frame {
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      background: linear-gradient(135deg, #1b1920 0%, #0d0c0e 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
       overflow: hidden;
+      position: relative;
+      background: #e2e8f0;
     }
 
-    /* Fotografía oficial de Laura Ramos */
-    .avatar-img {
+    .avatar-img-frame img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center 18%;
       display: block;
-      border-radius: 50%;
       transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .avatar-circle:hover .avatar-img {
-      transform: scale(1.05);
+    .avatar-glass-orb:hover img {
+      transform: scale(1.06);
     }
 
     /* ==========================================================================
-       INFORMACIÓN Y JERARQUÍA EDITORIAL
+       INFORMACIÓN Y JERARQUÍA TIPOGRÁFICA (Clean Apple / Editorial)
        ========================================================================== */
-    .profile-info {
+    .identity-section {
       text-align: center;
       width: 100%;
       margin-bottom: 22px;
     }
 
-    .profile-name {
-      font-family: 'Cormorant Garamond', Georgia, serif;
+    .person-name {
       font-size: 2.15rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: var(--text-primary);
-      margin-bottom: 4px;
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      color: var(--text-main);
       line-height: 1.15;
+      margin-bottom: 6px;
     }
 
-    .profile-title {
-      font-size: 0.8rem;
+    .person-role {
+      font-size: 0.88rem;
       font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--gold-champagne);
+      color: var(--text-muted);
+      letter-spacing: 0.02em;
       margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
     }
 
-    .profile-quote-box {
-      position: relative;
-      padding: 10px 16px;
-      border-radius: var(--radius-sm);
-      background: var(--gold-gradient-soft);
-      border-top: 1px solid rgba(212, 175, 55, 0.22);
-      border-bottom: 1px solid rgba(212, 175, 55, 0.22);
+    .person-role-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+      background: rgba(15, 23, 42, 0.06);
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: 0.04em;
+    }
+
+    /* Cápsula esmerilada para la frase */
+    .quote-capsule {
       margin: 0 auto;
       max-width: 340px;
+      padding: 9px 18px;
+      background: rgba(255, 255, 255, 0.55);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-full);
+      box-shadow: 
+        0 4px 12px rgba(15, 23, 42, 0.03),
+        inset 0 1px 1px rgba(255, 255, 255, 0.9);
     }
 
-    .profile-quote {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.05rem;
+    .quote-text {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-muted);
       font-style: italic;
-      color: var(--text-secondary);
-      line-height: 1.4;
     }
 
     /* ==========================================================================
-       FILA DE BOTONES DE ACCIÓN RÁPIDA (Grandes y Táctiles)
+       FILA DE BOTONES DE ACCIÓN RÁPIDA (Liquid Glass Pills con Refracción)
+       Inspirado en el switch verde de cristal de la referencia
        ========================================================================== */
-    .quick-actions-grid {
+    .quick-actions-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
@@ -296,78 +390,108 @@
       margin-bottom: 20px;
     }
 
-    .quick-action-btn {
+    .liquid-action-card {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 14px 8px;
-      border-radius: var(--radius-md);
-      background: var(--btn-bg);
-      border: 1px solid var(--btn-border);
+      padding: 16px 8px;
+      background: var(--glass-pill);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1.5px solid var(--glass-border);
+      border-radius: var(--radius-item);
+      box-shadow: var(--pill-shadow);
       text-decoration: none;
-      color: var(--text-primary);
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      color: var(--text-main);
       position: relative;
       overflow: hidden;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .quick-action-btn::after {
-      content: '';
+    /* Resplandor de color interior (como el verde tras el vidrio en la imagen) */
+    .card-core-glow {
       position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at center, rgba(212, 175, 55, 0.15), transparent 70%);
-      opacity: 0;
-      transition: opacity 0.25s ease;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      top: 10px;
+      filter: blur(12px);
+      opacity: 0.5;
+      transition: all 0.3s ease;
+      z-index: 0;
     }
 
-    .quick-action-btn:hover,
-    .quick-action-btn:active {
-      transform: translateY(-3px);
-      border-color: var(--btn-hover-border);
-      background: rgba(255, 255, 255, 0.07);
+    .card-whatsapp .card-core-glow { background: #10b981; }
+    .card-email .card-core-glow { background: #f43f5e; }
+    .card-call .card-core-glow { background: #0284c7; }
+
+    .liquid-action-card:hover {
+      transform: translateY(-3px) scale(1.02);
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 
+        0 16px 30px -6px rgba(15, 23, 42, 0.12),
+        inset 0 1.5px 1px 0 rgba(255, 255, 255, 1);
     }
 
-    .quick-action-btn:hover::after,
-    .quick-action-btn:active::after {
-      opacity: 1;
+    .liquid-action-card:hover .card-core-glow {
+      opacity: 0.85;
+      transform: scale(1.3);
     }
 
-    .quick-action-icon {
-      width: 26px;
-      height: 26px;
-      margin-bottom: 8px;
+    .liquid-action-card:active {
+      transform: translateY(1px) scale(0.97);
+      box-shadow: var(--pill-shadow-active);
+    }
+
+    .action-icon-circle {
+      position: relative;
+      z-index: 1;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(255, 255, 255, 1);
+      box-shadow: 
+        0 4px 10px rgba(15, 23, 42, 0.06),
+        inset 0 1px 1px rgba(255, 255, 255, 1);
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-bottom: 8px;
       transition: transform 0.25s ease;
     }
 
-    .quick-action-btn:hover .quick-action-icon {
-      transform: scale(1.1);
+    .card-whatsapp .action-icon-circle { color: #059669; }
+    .card-email .action-icon-circle { color: #e11d48; }
+    .card-call .action-icon-circle { color: #0284c7; }
+
+    .liquid-action-card:hover .action-icon-circle {
+      transform: scale(1.08);
     }
 
-    /* Colores temáticos elegantes para cada icono */
-    .btn-wa .quick-action-icon { color: #34d399; }
-    .btn-mail .quick-action-icon { color: var(--gold-champagne); }
-    .btn-call .quick-action-icon { color: #60a5fa; }
-
-    .quick-action-label {
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
+    .action-label {
+      position: relative;
+      z-index: 1;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
     }
 
-    .quick-action-sub {
-      font-size: 0.64rem;
+    .action-sub {
+      position: relative;
+      z-index: 1;
+      font-size: 0.68rem;
+      font-weight: 500;
       color: var(--text-muted);
       margin-top: 2px;
     }
 
     /* ==========================================================================
-       LISTA DE ENLACES PROFESIONALES (Web, Instagram, LinkedIn)
+       LISTA DE ENLACES PROFESIONALES (Cápsulas Horizontales de Vidrio)
        ========================================================================== */
-    .links-list {
+    .links-column {
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -375,149 +499,196 @@
       margin-bottom: 22px;
     }
 
-    .link-row {
+    .liquid-link-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 13px 16px;
-      border-radius: var(--radius-md);
-      background: var(--btn-bg);
-      border: 1px solid var(--btn-border);
+      background: var(--glass-pill);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1.5px solid var(--glass-border);
+      border-radius: var(--radius-item);
+      box-shadow: var(--pill-shadow);
       text-decoration: none;
-      color: var(--text-primary);
-      transition: all 0.25s ease;
+      color: var(--text-main);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .link-row:hover,
-    .link-row:active {
-      border-color: var(--btn-hover-border);
-      background: rgba(212, 175, 55, 0.07);
-      transform: translateX(4px);
+    .liquid-link-row:hover {
+      transform: translateX(4px) translateY(-1px);
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: 
+        0 14px 28px -4px rgba(15, 23, 42, 0.1),
+        inset 0 1.5px 1px 0 rgba(255, 255, 255, 1);
     }
 
-    .link-left {
+    .liquid-link-row:active {
+      transform: translateX(2px) translateY(1px);
+    }
+
+    .link-left-content {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 13px;
     }
 
-    .link-icon-box {
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+    /* Mini orbe de vidrio con logo */
+    .link-glass-orb {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid var(--glass-border);
+      box-shadow: 
+        0 3px 8px rgba(15, 23, 42, 0.05),
+        inset 0 1px 1px rgba(255, 255, 255, 1);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--gold-champagne);
+      color: var(--text-main);
+      transition: transform 0.25s ease;
     }
 
-    .link-info {
+    .liquid-link-row:hover .link-glass-orb {
+      transform: scale(1.08);
+    }
+
+    .orb-web { color: #0284c7; }
+    .orb-instagram { color: #e11d48; }
+    .orb-linkedin { color: #0077b5; }
+
+    .link-text-group {
       display: flex;
       flex-direction: column;
     }
 
-    .link-title {
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--text-primary);
-      letter-spacing: 0.02em;
+    .link-main-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
     }
 
-    .link-desc {
-      font-size: 0.72rem;
+    .link-detail-sub {
+      font-size: 0.73rem;
+      font-weight: 500;
       color: var(--text-muted);
     }
 
-    .link-arrow {
-      color: var(--text-muted);
-      transition: transform 0.25s ease, color 0.25s ease;
+    .link-arrow-circle {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-light);
+      transition: all 0.25s ease;
     }
 
-    .link-row:hover .link-arrow {
-      color: var(--gold-champagne);
+    .liquid-link-row:hover .link-arrow-circle {
+      color: var(--text-main);
       transform: translateX(3px);
     }
 
     /* ==========================================================================
-       BOTÓN PRINCIPAL: GUARDAR CONTACTO (.VCF)
+       BOTÓN PRINCIPAL "GUARDAR CONTACTO" (Capsule Glass Master CTA)
        ========================================================================== */
-    .save-contact-btn {
+    .save-vcard-btn {
       width: 100%;
-      padding: 16px 20px;
+      padding: 16px 22px;
       border-radius: var(--radius-full);
-      background: var(--gold-gradient);
-      border: none;
-      color: #121015;
-      font-size: 0.88rem;
+      background: #0f172a; /* Cápsula oscura líquida de máximo contraste */
+      border: 1.5px solid rgba(255, 255, 255, 0.3);
+      color: #ffffff;
+      font-size: 0.92rem;
       font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
+      letter-spacing: 0.03em;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
       cursor: pointer;
-      box-shadow: var(--shadow-gold);
+      box-shadow: 
+        0 16px 32px -6px rgba(15, 23, 42, 0.35),
+        0 6px 14px -2px rgba(15, 23, 42, 0.2),
+        inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.4);
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
       position: relative;
       overflow: hidden;
     }
 
-    .save-contact-btn::before {
+    /* Efecto de destello de cristal deslizante */
+    .save-vcard-btn::before {
       content: '';
       position: absolute;
       top: -50%;
-      left: -50%;
-      width: 200%;
+      left: -60%;
+      width: 220%;
       height: 200%;
       background: linear-gradient(
         45deg,
-        transparent,
-        rgba(255, 255, 255, 0.4),
-        transparent
+        transparent 30%,
+        rgba(255, 255, 255, 0.22) 50%,
+        transparent 70%
       );
-      transform: rotate(45deg);
-      transition: 0.7s;
+      transform: rotate(25deg);
+      transition: all 0.75s ease;
       opacity: 0;
     }
 
-    .save-contact-btn:hover::before {
+    .save-vcard-btn:hover::before {
       left: 100%;
       opacity: 1;
     }
 
-    .save-contact-btn:hover {
+    .save-vcard-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 12px 30px rgba(212, 175, 55, 0.4);
+      box-shadow: 
+        0 20px 40px -6px rgba(15, 23, 42, 0.45),
+        inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.6);
+      background: #000000;
     }
 
-    .save-contact-btn:active {
+    .save-vcard-btn:active {
       transform: translateY(1px);
     }
 
     /* ==========================================================================
-       PIE DE TARJETA
+       PIE DE PÁGINA (Clean Tagline & Branding)
        ========================================================================== */
-    .card-footer {
-      margin-top: 22px;
-      text-align: center;
-      font-size: 0.68rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+    .card-footer-branding {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 4px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-light);
+    }
+
+    .footer-badge-left {
       color: var(--text-muted);
     }
 
+    .footer-badge-right {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
     /* ==========================================================================
-       MODAL DE CÓDIGO QR Y COMPARTIR
+       MODAL DE CÓDIGO QR "LIQUID GLASS"
        ========================================================================== */
-    .modal-overlay {
+    .modal-backdrop {
       position: fixed;
       inset: 0;
-      background: rgba(8, 7, 10, 0.85);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      background: rgba(15, 23, 42, 0.45);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -528,154 +699,166 @@
       z-index: 100;
     }
 
-    .modal-overlay.active {
+    .modal-backdrop.active {
       opacity: 1;
       pointer-events: auto;
     }
 
-    .modal-content {
-      background: #18171d;
-      border: 1px solid rgba(212, 175, 55, 0.3);
-      border-radius: var(--radius-lg);
+    .modal-glass-sheet {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(36px);
+      -webkit-backdrop-filter: blur(36px);
+      border: 2px solid #ffffff;
+      border-radius: 32px;
       padding: 30px 24px;
       width: 100%;
       max-width: 340px;
       text-align: center;
       position: relative;
-      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8);
+      box-shadow: 
+        0 30px 60px -10px rgba(15, 23, 42, 0.25),
+        inset 0 1.5px 1px 0 rgba(255, 255, 255, 1);
       transform: scale(0.92);
       transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .modal-overlay.active .modal-content {
+    .modal-backdrop.active .modal-glass-sheet {
       transform: scale(1);
     }
 
-    .modal-close {
+    .modal-close-pill {
       position: absolute;
       top: 14px;
       right: 14px;
-      background: transparent;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(15, 23, 42, 0.06);
       border: none;
       color: var(--text-muted);
       cursor: pointer;
-      font-size: 1.4rem;
-      padding: 4px 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      transition: all 0.2s ease;
     }
 
-    .modal-close:hover {
-      color: var(--text-primary);
+    .modal-close-pill:hover {
+      background: rgba(15, 23, 42, 0.12);
+      color: var(--text-main);
     }
 
-    .qr-frame {
+    .qr-acrylic-frame {
       background: #ffffff;
       padding: 16px;
-      border-radius: 16px;
+      border-radius: 22px;
       display: inline-block;
       margin: 18px 0;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      box-shadow: 
+        0 14px 28px -6px rgba(15, 23, 42, 0.08),
+        0 0 0 1px rgba(15, 23, 42, 0.04);
     }
 
-    .qr-frame svg {
-      display: block;
-    }
-
-    .modal-btn-copy {
+    .modal-copy-btn {
       width: 100%;
       padding: 12px;
       border-radius: var(--radius-full);
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      color: var(--text-primary);
-      font-size: 0.8rem;
-      font-weight: 600;
+      background: rgba(15, 23, 42, 0.06);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      color: var(--text-main);
+      font-size: 0.82rem;
+      font-weight: 700;
       cursor: pointer;
       transition: all 0.2s ease;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      margin-top: 10px;
     }
 
-    .modal-btn-copy:hover {
-      background: rgba(212, 175, 55, 0.15);
-      border-color: var(--gold-champagne);
-      color: var(--gold-champagne);
+    .modal-copy-btn:hover {
+      background: #0f172a;
+      color: #ffffff;
     }
 
     /* ==========================================================================
-       TOAST FLOTANTE DE NOTIFICACIÓN
+       TOAST FLOTANTE "LIQUID GLASS"
        ========================================================================== */
-    .toast-notice {
+    .toast-pill {
       position: fixed;
       bottom: 24px;
       left: 50%;
       transform: translateX(-50%) translateY(70px);
-      background: rgba(20, 19, 24, 0.96);
-      border: 1px solid var(--gold-primary);
-      color: var(--gold-champagne);
-      padding: 12px 22px;
+      background: rgba(15, 23, 42, 0.92);
+      color: #ffffff;
+      padding: 12px 24px;
       border-radius: var(--radius-full);
-      font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(10px);
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      box-shadow: 
+        0 14px 35px rgba(15, 23, 42, 0.35),
+        inset 0 1px 1px rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       opacity: 0;
       pointer-events: none;
       transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
       z-index: 200;
     }
 
-    .toast-notice.show {
+    .toast-pill.show {
       transform: translateX(-50%) translateY(0);
       opacity: 1;
     }
 
     @media (max-width: 380px) {
-      .card-container {
-        padding: 24px 16px;
+      .liquid-card {
+        padding: 22px 16px;
       }
-      .profile-name {
+      .person-name {
         font-size: 1.85rem;
       }
-      .quick-actions-grid {
+      .quick-actions-row {
         gap: 8px;
-      }
-      .quick-action-label {
-        font-size: 0.72rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="bg-grain"></div>
+  <!-- Rejilla técnica de fondo estilo Figma / Apple Canvas -->
+  <div class="canvas-grid"></div>
 
-  <!-- TARJETA PRINCIPAL -->
-  <main class="card-container" id="tarjeta-laura-ramos">
+  <!-- Luces y esferas de refracción líquida (Liquid Glass) -->
+  <div class="ambient-refractor refractor-1"></div>
+  <div class="ambient-refractor refractor-2"></div>
+  <div class="ambient-refractor refractor-3"></div>
+
+  <!-- TARJETA PRINCIPAL LIQUID GLASS -->
+  <main class="liquid-card" id="tarjeta-laura-ramos">
     
-    <!-- Barra superior: Marca AUREA y acciones rápidas -->
-    <header class="card-topbar">
-      <div class="brand-tag">
-        <span class="brand-tag-dot"></span>
+    <!-- Barra superior de navegación y utilidades -->
+    <header class="top-toolbar">
+      <div class="pill-badge">
+        <span class="pill-badge-dot"></span>
         <span>AUREA · EDITORIAL</span>
       </div>
-      <div class="top-actions">
-        <button class="icon-action-btn" id="btn-open-qr" title="Ver Código QR" aria-label="Mostrar código QR de la tarjeta">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <div class="toolbar-actions">
+        <button class="liquid-circle-btn" id="btn-open-qr" title="Escanear Código QR" aria-label="Mostrar código QR de la tarjeta">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <rect x="3" y="3" width="7" height="7"></rect>
             <rect x="14" y="3" width="7" height="7"></rect>
             <rect x="14" y="14" width="7" height="7"></rect>
             <rect x="3" y="14" width="7" height="7"></rect>
           </svg>
         </button>
-        <button class="icon-action-btn" id="btn-share-top" title="Compartir tarjeta" aria-label="Compartir tarjeta">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <button class="liquid-circle-btn" id="btn-share-top" title="Compartir tarjeta" aria-label="Compartir enlace">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="18" cy="5" r="3"></circle>
             <circle cx="6" cy="12" r="3"></circle>
             <circle cx="18" cy="19" r="3"></circle>
@@ -686,96 +869,103 @@
       </div>
     </header>
 
-    <!-- Fotografía oficial de Laura Ramos -->
-    <div class="avatar-wrapper">
-      <div class="avatar-circle">
-        <div class="avatar-inner">
-          <img src="foto.jpg" alt="Laura Ramos - Editora jefe de AUREA" class="avatar-img" id="avatar-image">
+    <!-- Avatar de Laura con doble cápsula de cristal y anillos concéntricos -->
+    <div class="avatar-pod-wrapper">
+      <div class="concentric-ring"></div>
+      <div class="avatar-glass-orb">
+        <div class="avatar-img-frame">
+          <img src="foto.jpg" alt="Laura Ramos - Editora jefe de AUREA" id="avatar-image">
         </div>
       </div>
     </div>
 
-    <!-- Identidad: Nombre, Cargo y Frase -->
-    <section class="profile-info">
-      <h1 class="profile-name">Laura Ramos</h1>
-      <p class="profile-title">Editora jefe de AUREA</p>
+    <!-- Identidad: Nombre, Cargo y Frase en cápsula -->
+    <section class="identity-section">
+      <h1 class="person-name">Laura Ramos</h1>
+      <p class="person-role">
+        <span>Editora jefe de</span>
+        <span class="person-role-badge">AUREA</span>
+      </p>
       
-      <div class="profile-quote-box">
-        <p class="profile-quote">«Cada portada, una declaración de estilo.»</p>
+      <div class="quote-capsule">
+        <p class="quote-text">«Cada portada, una declaración de estilo.»</p>
       </div>
     </section>
 
-    <!-- Fila de 3 botones de contacto grande -->
-    <section class="quick-actions-grid" aria-label="Contacto directo">
-      <!-- WhatsApp -->
+    <!-- Fila de 3 cápsulas táctiles de contacto rápido -->
+    <section class="quick-actions-row" aria-label="Contacto directo">
+      <!-- WhatsApp (Cápsula con refracción verde estilo Liquid Glass) -->
       <a href="https://wa.me/34600000000?text=Hola%20Laura,%20te%20contacto%20desde%20tu%20tarjeta%20digital." 
-         class="quick-action-btn btn-wa" 
+         class="liquid-action-card card-whatsapp" 
          id="btn-whatsapp"
          target="_blank" 
          rel="noopener noreferrer"
-         aria-label="Abrir WhatsApp con Laura Ramos">
-        <div class="quick-action-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+         aria-label="Abrir WhatsApp">
+        <div class="card-core-glow"></div>
+        <div class="action-icon-circle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
           </svg>
         </div>
-        <span class="quick-action-label">WhatsApp</span>
-        <span class="quick-action-sub">Chat directo</span>
+        <span class="action-label">WhatsApp</span>
+        <span class="action-sub">Chat directo</span>
       </a>
 
       <!-- Email -->
       <a href="mailto:lauraramos@aurearev.com?subject=Contacto%20editorial%20desde%20tarjeta%20digital" 
-         class="quick-action-btn btn-mail" 
+         class="liquid-action-card card-email" 
          id="btn-email"
-         aria-label="Enviar correo a Laura Ramos">
-        <div class="quick-action-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+         aria-label="Enviar correo">
+        <div class="card-core-glow"></div>
+        <div class="action-icon-circle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
             <polyline points="22,6 12,13 2,6"></polyline>
           </svg>
         </div>
-        <span class="quick-action-label">Email</span>
-        <span class="quick-action-sub">Mensaje</span>
+        <span class="action-label">Email</span>
+        <span class="action-sub">Mensaje</span>
       </a>
 
-      <!-- Teléfono -->
+      <!-- Llamar -->
       <a href="tel:+34600000000" 
-         class="quick-action-btn btn-call" 
+         class="liquid-action-card card-call" 
          id="btn-call"
-         aria-label="Llamar a Laura Ramos">
-        <div class="quick-action-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+         aria-label="Llamar por teléfono">
+        <div class="card-core-glow"></div>
+        <div class="action-icon-circle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
           </svg>
         </div>
-        <span class="quick-action-label">Llamar</span>
-        <span class="quick-action-sub">+34 600...</span>
+        <span class="action-label">Llamar</span>
+        <span class="action-sub">+34 600...</span>
       </a>
     </section>
 
-    <!-- Lista de enlaces: Web, Instagram, LinkedIn -->
-    <section class="links-list" aria-label="Enlaces oficiales">
+    <!-- Lista de enlaces profesionales en cápsulas esmeriladas -->
+    <section class="links-column" aria-label="Enlaces oficiales">
       <!-- Web Oficial -->
       <a href="https://www.aurearev.com" 
          target="_blank" 
          rel="noopener noreferrer" 
-         class="link-row"
+         class="liquid-link-row"
          id="link-web">
-        <div class="link-left">
-          <div class="link-icon-box">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="link-left-content">
+          <div class="link-glass-orb orb-web">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
               <line x1="2" y1="12" x2="22" y2="12"></line>
               <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
             </svg>
           </div>
-          <div class="link-info">
-            <span class="link-title">Sitio Web Oficial</span>
-            <span class="link-desc">www.aurearev.com</span>
+          <div class="link-text-group">
+            <span class="link-main-title">Sitio Web Oficial</span>
+            <span class="link-detail-sub">www.aurearev.com</span>
           </div>
         </div>
-        <div class="link-arrow">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="link-arrow-circle">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="9 18 15 12 9 6"></polyline>
           </svg>
         </div>
@@ -785,23 +975,23 @@
       <a href="https://instagram.com/laura_revaurea" 
          target="_blank" 
          rel="noopener noreferrer" 
-         class="link-row"
+         class="liquid-link-row"
          id="link-instagram">
-        <div class="link-left">
-          <div class="link-icon-box">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="link-left-content">
+          <div class="link-glass-orb orb-instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
               <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
               <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
             </svg>
           </div>
-          <div class="link-info">
-            <span class="link-title">Instagram</span>
-            <span class="link-desc">@laura_revaurea</span>
+          <div class="link-text-group">
+            <span class="link-main-title">Instagram</span>
+            <span class="link-detail-sub">@laura_revaurea</span>
           </div>
         </div>
-        <div class="link-arrow">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="link-arrow-circle">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="9 18 15 12 9 6"></polyline>
           </svg>
         </div>
@@ -811,32 +1001,32 @@
       <a href="https://www.linkedin.com/in/laurarevaurea" 
          target="_blank" 
          rel="noopener noreferrer" 
-         class="link-row"
+         class="liquid-link-row"
          id="link-linkedin">
-        <div class="link-left">
-          <div class="link-icon-box">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="link-left-content">
+          <div class="link-glass-orb orb-linkedin">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
               <rect x="2" y="9" width="4" height="12"></rect>
               <circle cx="4" cy="4" r="2"></circle>
             </svg>
           </div>
-          <div class="link-info">
-            <span class="link-title">LinkedIn</span>
-            <span class="link-desc">Perfil Profesional</span>
+          <div class="link-text-group">
+            <span class="link-main-title">LinkedIn</span>
+            <span class="link-detail-sub">Perfil Profesional</span>
           </div>
         </div>
-        <div class="link-arrow">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="link-arrow-circle">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="9 18 15 12 9 6"></polyline>
           </svg>
         </div>
       </a>
     </section>
 
-    <!-- Botón Principal: Guardar Contacto vCard -->
-    <button class="save-contact-btn" id="btn-save-contact" aria-label="Guardar Laura Ramos en contactos">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Botón Maestro: Guardar Contacto (Cápsula Oscura Líquida) -->
+    <button class="save-vcard-btn" id="btn-save-contact" aria-label="Guardar contacto en la agenda">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
         <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
         <polyline points="17 21 17 13 7 13 7 21"></polyline>
         <polyline points="7 3 7 8 15 8"></polyline>
@@ -844,29 +1034,34 @@
       <span>Guardar Contacto</span>
     </button>
 
-    <!-- Pie de página -->
-    <footer class="card-footer">
-      <span>AUREA · Edición Digital © 2026</span>
+    <!-- Pie con detalles de marca técnica estilo Liquid Glass -->
+    <footer class="card-footer-branding">
+      <span class="footer-badge-left">AUREA Magazine</span>
+      <span class="footer-badge-right">
+        <span>© 2026</span>
+        <span>·</span>
+        <span>Liquid Glass</span>
+      </span>
     </footer>
   </main>
 
   <!-- MODAL DE CÓDIGO QR -->
-  <div class="modal-overlay" id="qr-modal" role="dialog" aria-modal="true" aria-label="Código QR de la tarjeta">
-    <div class="modal-content">
-      <button class="modal-close" id="btn-close-modal" aria-label="Cerrar modal">&times;</button>
-      <div class="brand-tag" style="margin-bottom: 8px;">
-        <span class="brand-tag-dot"></span>
+  <div class="modal-backdrop" id="qr-modal" role="dialog" aria-modal="true" aria-label="Código QR de la tarjeta">
+    <div class="modal-glass-sheet">
+      <button class="modal-close-pill" id="btn-close-modal" aria-label="Cerrar modal">&times;</button>
+      <div class="pill-badge" style="margin-bottom: 10px;">
+        <span class="pill-badge-dot"></span>
         <span>ESCANEAR TARJETA</span>
       </div>
-      <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 4px;">Laura Ramos</h3>
-      <p style="font-size: 0.78rem; color: var(--text-muted);">Apunta con la cámara de tu móvil para abrir esta tarjeta al instante.</p>
+      <h3 style="font-size: 1.35rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 4px;">Laura Ramos</h3>
+      <p style="font-size: 0.8rem; color: var(--text-muted);">Apunta con la cámara de tu móvil para abrir esta tarjeta al instante.</p>
       
-      <div class="qr-frame" id="qr-container">
-        <!-- QR Vectorial SVG inyectado por JavaScript -->
+      <div class="qr-acrylic-frame" id="qr-container">
+        <!-- QR Vectorial renderizado por JS -->
       </div>
 
-      <button class="modal-btn-copy" id="btn-copy-link">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <button class="modal-copy-btn" id="btn-copy-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
           <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
         </svg>
@@ -876,10 +1071,9 @@
   </div>
 
   <!-- AVISO TOAST FLOTANTE -->
-  <div class="toast-notice" id="toast-notice" role="alert" aria-live="polite">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+  <div class="toast-pill" id="toast-notice" role="alert" aria-live="polite">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"></polyline>
     </svg>
     <span id="toast-text">Contacto descargado</span>
   </div>
@@ -894,7 +1088,6 @@
       organization: "AUREA",
       title: "Editora jefe de AUREA",
       phone: "+34600000000",
-      phoneFormatted: "+34 600 000 000",
       email: "lauraramos@aurearev.com",
       website: "https://www.aurearev.com",
       instagram: "https://instagram.com/laura_revaurea",
@@ -902,7 +1095,7 @@
       note: "Cada portada, una declaración de estilo."
     };
 
-    // Función para mostrar aviso Toast
+    // Función para mostrar Toast flotante
     function showToast(message) {
       const toast = document.getElementById('toast-notice');
       const toastText = document.getElementById('toast-text');
@@ -910,12 +1103,11 @@
       toast.classList.add('show');
       setTimeout(() => {
         toast.classList.remove('show');
-      }, 3200);
+      }, 3000);
     }
 
     // GENERAR Y DESCARGAR ARCHIVO VCARD (.VCF)
     function downloadVCard() {
-      // Estándar vCard 3.0 compatible nativamente con iOS (Apple Contacts) y Android (Google Contacts)
       const vcardContent = [
         'BEGIN:VCARD',
         'VERSION:3.0',
@@ -947,11 +1139,11 @@
 
     document.getElementById('btn-save-contact').addEventListener('click', downloadVCard);
 
-    // SISTEMA DE COMPARTIR NATIVO (Web Share API)
+    // SISTEMA DE COMPARTIR NATIVO
     async function shareCard() {
       const shareData = {
         title: `${CONTACT_DATA.name} | ${CONTACT_DATA.title}`,
-        text: `Tarjeta de contacto de ${CONTACT_DATA.name} (${CONTACT_DATA.organization}): "${CONTACT_DATA.note}"`,
+        text: `Tarjeta de contacto de ${CONTACT_DATA.name}: "${CONTACT_DATA.note}"`,
         url: window.location.href
       };
 
@@ -1009,8 +1201,7 @@
       if (e.target === qrModal) qrModal.classList.remove('active');
     });
 
-    // GENERADOR AUTÓNOMO DE CÓDIGO QR SVG
-    // Genera un QR limpio usando la API universal estándar para representación visual instantánea
+    // GENERADOR DE CÓDIGO QR
     function renderQRCode() {
       const currentUrl = encodeURIComponent(window.location.href);
       const container = document.getElementById('qr-container');
@@ -1021,17 +1212,15 @@
       img.width = 170;
       img.height = 170;
       img.style.display = 'block';
-      img.style.borderRadius = '8px';
+      img.style.borderRadius = '12px';
       
-      // Fallback si no hay conexión a internet inmediata
       img.onerror = function() {
         container.innerHTML = `
-          <svg width="170" height="170" viewBox="0 0 24 24" fill="none" stroke="#121015" stroke-width="1.5">
+          <svg width="170" height="170" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="1.5">
             <rect x="3" y="3" width="7" height="7"></rect>
             <rect x="14" y="3" width="7" height="7"></rect>
             <rect x="14" y="14" width="7" height="7"></rect>
             <rect x="3" y="14" width="7" height="7"></rect>
-            <path d="M7 7h.01M17 7h.01M7 17h.01M17 17h.01"></path>
           </svg>
         `;
       };
