@@ -10,6 +10,7 @@
   <meta property="og:title" content="Laura Ramos | Editora jefe de AUREA">
   <meta property="og:description" content="Cada portada, una declaración de estilo. Tarjeta digital de contacto interactiva.">
   <meta property="og:type" content="profile">
+  <meta property="og:image" content="foto.jpg">
 
   <!-- Tipografías de alta gama editorial: Cormorant Garamond & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -185,8 +186,8 @@
     }
 
     .avatar-circle {
-      width: 104px;
-      height: 104px;
+      width: 114px;
+      height: 114px;
       border-radius: 50%;
       background: linear-gradient(145deg, #1f1d24, #121115);
       display: flex;
@@ -194,7 +195,7 @@
       justify-content: center;
       position: relative;
       padding: 3px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 175, 55, 0.15);
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.75), 0 0 25px rgba(212, 175, 55, 0.22);
     }
 
     /* Anillo exterior con gradiente dorado fino */
@@ -221,24 +222,19 @@
       overflow: hidden;
     }
 
-    /* Tipografía del monograma editorial LR */
-    .avatar-monogram {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 2.7rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      background: var(--gold-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      user-select: none;
-    }
-
-    /* En caso de colocar foto real más adelante: */
+    /* Fotografía oficial de Laura Ramos */
     .avatar-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: none; /* Descomentar o activar cuando haya imagen */
+      object-position: center 18%;
+      display: block;
+      border-radius: 50%;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .avatar-circle:hover .avatar-img {
+      transform: scale(1.05);
     }
 
     /* ==========================================================================
@@ -690,15 +686,11 @@
       </div>
     </header>
 
-    <!-- Foto / Iniciales "LR" -->
+    <!-- Fotografía oficial de Laura Ramos -->
     <div class="avatar-wrapper">
       <div class="avatar-circle">
         <div class="avatar-inner">
-          <span class="avatar-monogram">LR</span>
-          <!-- NOTA PARA SUSTITUIR POR FOTO REAL:
-               Guarda tu imagen como 'foto.jpg' en esta carpeta y descomenta la siguiente línea:
-               <img src="foto.jpg" alt="Laura Ramos" class="avatar-img" style="display:block;">
-          -->
+          <img src="foto.jpg" alt="Laura Ramos - Editora jefe de AUREA" class="avatar-img" id="avatar-image">
         </div>
       </div>
     </div>
