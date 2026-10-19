@@ -1,15 +1,15 @@
 # Tarjeta de Presentación Digital — Laura Ramos (AUREA)
 
-Tarjeta y portafolio web digital en diseño **Artistic Torn Paper Collage ("not defined. A work in progress.")**, inspirado directamente en el cartelismo de vanguardia con retrato fragmentado de Laura Ramos en collage de papel rasgado, pliegues táctiles, contrastes analógicos, círculo terracota y tipografía brutalista de alta costura.
+Tarjeta y portafolio web editorial inspirado en el diseño de vanguardia suizo / cartelismo editorial brutalista (estilo **Sofia Vale**): tipografía condensed monumental, lienzo de papel cálido táctil, contrastes en negro tinta, acentos carmesí de alta costura, sellos postales y cintas adhesivas de diseño.
 
 ---
 
-## 📱 Datos Oficiales de Laura Ramos
+## 📱 Datos oficiales de Laura Ramos
 
 - **Nombre**: Laura Ramos
 - **Cargo**: Editora jefe de AUREA
-- **Lema**: *"not defined. A work in progress. Cada portada, una declaración de estilo."*
-- **Fotografía & Collage**: [poster_art.jpg](file:///Users/itxasportatil/tarjeta-Laura-Ramos-/poster_art.jpg) (Retrato oficial en collage de tiras de papel rasgado con bordes blancos de barbas sobre lienzo kraft)
+- **Lema**: *"Cada portada, una declaración de estilo."*
+- **Fotografía**: [foto.jpg](file:///Users/itxasportatil/tarjeta-Laura-Ramos-/foto.jpg) con composición de bloque carmesí asimétrico y sello kraft.
 - **WhatsApp**: [+34 600 000 000](https://wa.me/34600000000)
 - **Teléfono**: [+34 600 000 000](tel:+34600000000)
 - **Email**: [lauraramos@aurearev.com](mailto:lauraramos@aurearev.com)
@@ -19,26 +19,24 @@ Tarjeta y portafolio web digital en diseño **Artistic Torn Paper Collage ("not 
 
 ---
 
-## 🎨 Especificaciones del Cartel Artístico ("not defined.")
+## 📰 Secciones y Arquitectura Editorial
 
-1. **Titular Monumental**:
-   - `not defined.` en tipografía geométrica bold minúscula con trazo manual en terracota (`#C84B31`) debajo de `defined.`.
-2. **Sello Circular Giratorio**:
-   - `THESE PIECES · THESE PIECES · THESE PIECES ·` con rotación continua suave y apertura de biografía al interactuar.
-3. **Bloque Tipo Máquina Superior Derecho**:
-   - Manifiesto: `We change. / We hide. / We grow. / We bloom. / We are.` acompañado de la columna de 3 triángulos descendentes `▼ ▼ ▼`.
-4. **Collage Central de Laura Ramos**:
-   - Retrato en blanco y negro de película analógica fragmentado en tiras de papel rasgado con bordes orgánicos texturizados.
-   - Sol/círculo terracota quemado de fondo en la esquina superior derecha.
-   - Pliegues de papel cruzados (líneas de hendidura de póster doblado).
-5. **Texto Manuscrito en Terracota**:
-   - Frase caligráfica `A work in progress.` con trazo fluido subrayado.
-6. **Elementos de la Base**:
-   - Asterisco `✱` y lema `NOT FRAGILE. JUST REAL.`.
-   - Bloque de trama rasterizada halftone en el centro.
-   - Sello de año enmarcado con línea divisoria `[ 20 | 26 ]`.
-7. **Dock de Acciones Táctiles**:
-   - Botón destacado terracota `💾 GUARDAR VCARD` para descarga en 1 clic.
-   - Botón directo de `💬 WHATSAPP`.
-   - Botón de `📱 CÓDIGO QR` para escanear en eventos.
-   - Enlaces directos a Portadas AUREA (*RITUÁL, AUREA, NÉCTAR, SABLE*), datos oficiales y compartir perfil.
+1. **Header**: Logotipo minimalista `LAURA RAMOS`, navegación limpia y botón de acceso directo a Código QR.
+2. **Hero de Impacto**:
+   - Tipografía ultra-condensada monumental (`LAURA RAMOS`).
+   - Etiqueta inclinada estilo cinta adhesiva carmesí: `EDITORA JEFE`.
+   - Composición fotográfica con bloque rojo desfasado (`MADRID · PARÍS — AUREA '26`).
+   - Sello de papel kraft con monograma `LR` y cinta adhesiva translúcida.
+   - Cintilla vertical `DISPONIBLE PARA PROYECTOS` y botón circular `LET'S TALK`.
+3. **Manifiesto (Bloque Negro)**: Filosofía editorial, titular de gran escala y sello vintage giratorio de imprenta.
+4. **Servicios (`/ SERVICES`)**: Retícula de 4 columnas (Dirección Editorial, Identidad Visual, Creative Direction, Experiencia Digital).
+5. **Especialidades & Disciplinas (`/ EXPERTISE`)**: Tipografías apiladas, barras de porcentaje minimalistas y bloque terracota con asterisco `✱` y nota adhesiva *"Ideas que conmueven a las personas"*.
+6. **Portadas Seleccionadas (`/ SELECTED WORK`)**:
+   - `RITUÁL` — Alta costura escultural (Carmesí).
+   - `AUREA` — Arquitectura del estilo y elegancia clásica.
+   - `NÉCTAR` — Edición botánica y esencia oscura.
+   - `SABLE` — Campaña cinematográfica noir en blanco y negro.
+   - Cada portada es interactiva con visor modal en alta resolución.
+7. **Prensa & Testimonios (`/ PRESS & WORDS`)**: Crítica editorial de *It's Nice That*, logotipos de cabeceras (*Vogue, Wallpaper\*, Landor, Frame, Monocle*) y reseñas de la industria.
+8. **Contacto Directo (`/ GET IN TOUCH`)**: Acceso directo a WhatsApp, llamada telefónica, descarga de vCard en 1 clic y formulario editorial.
+9. **Dock Flotante Permanente**: Barra inferior de accesos rápidos para guardar el contacto en la agenda del móvil y escanear el QR en eventos presenciales.
