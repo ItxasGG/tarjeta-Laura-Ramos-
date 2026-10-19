@@ -9,7 +9,7 @@ Tarjeta y portafolio web editorial inspirado en el diseño de vanguardia suizo /
 - **Nombre**: Laura Ramos
 - **Cargo**: Editora jefe de AUREA
 - **Lema**: *"Cada portada, una declaración de estilo."*
-- **Fotografía**: [foto.jpg](file:///Users/itxasportatil/tarjeta-Laura-Ramos-/foto.jpg) con composición de bloque carmesí asimétrico y sello kraft.
+- **Fotografía**: [foto_laura.jpg](file:///Users/itxasportatil/tarjeta-Laura-Ramos-/foto_laura.jpg) con composición de bloque carmesí asimétrico y sello kraft.
 - **WhatsApp**: [+34 600 000 000](https://wa.me/34600000000)
 - **Teléfono**: [+34 600 000 000](tel:+34600000000)
 - **Email**: [lauraramos@aurearev.com](mailto:lauraramos@aurearev.com)
