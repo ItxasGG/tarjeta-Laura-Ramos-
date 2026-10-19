@@ -1,13 +1,15 @@
 # Tarjeta de Presentación Digital — Laura Ramos (AUREA)
 
-Tarjeta de presentación web interactiva con estética **Liquid Glass** (vidrio líquido neumórfico esmerilado, iluminación especular, canvas técnico y cápsulas táctiles estilo Apple / Figma).
+Tarjeta y portafolio web editorial inspirado en el diseño de vanguardia suizo / cartelismo editorial brutalista (estilo **Sofia Vale**): tipografía condensed monumental, lienzo de papel cálido táctil, contrastes en negro tinta, acentos carmesí de alta costura, sellos postales y cintas adhesivas de diseño.
 
-## 📱 Datos incluidos
+---
+
+## 📱 Datos oficiales de Laura Ramos
 
 - **Nombre**: Laura Ramos
 - **Cargo**: Editora jefe de AUREA
 - **Lema**: *"Cada portada, una declaración de estilo."*
-- **Fotografía**: [foto.jpg](file:///Users/itxasportatil/tarjeta-Laura-Ramos-/foto.jpg) en cápsula circular con anillos concéntricos.
+- **Fotografía**: [foto.jpg](file:///Users/itxasportatil/tarjeta-Laura-Ramos-/foto.jpg) con composición de bloque carmesí asimétrico y sello kraft.
 - **WhatsApp**: [+34 600 000 000](https://wa.me/34600000000)
 - **Teléfono**: [+34 600 000 000](tel:+34600000000)
 - **Email**: [lauraramos@aurearev.com](mailto:lauraramos@aurearev.com)
@@ -17,10 +19,24 @@ Tarjeta de presentación web interactiva con estética **Liquid Glass** (vidrio 
 
 ---
 
-## 💎 Elementos de diseño "Liquid Glass"
+## 📰 Secciones y Arquitectura Editorial
 
-1. **Canvas milimétrico de fondo**: Cuadrícula técnica sutil y esferas de luz ambiental desenfocadas que refractan a través del vidrio líquido.
-2. **Cápsulas de cristal líquido**: Botones con relieve 3D, bordes translúcidos con reflejo blanco superior (`inset 0 1.5px 1px 0 #fff`) y resplandor interior (como el interruptor esmerilado verde y los orbes de la referencia).
-3. **Avatar con anillos concéntricos**: Retrato de Laura integrado en un orbe esmerilado rodeado de un halo geométrico circular.
-4. **Guardar Contacto en 1 Clic**: Generación y descarga directa del archivo `Laura_Ramos_AUREA.vcf` (vCard 3.0).
-5. **Modal de Código QR**: Ventana de cristal esmerilado con código QR para escanear en persona.
+1. **Header**: Logotipo minimalista `LAURA RAMOS`, navegación limpia y botón de acceso directo a Código QR.
+2. **Hero de Impacto**:
+   - Tipografía ultra-condensada monumental (`LAURA RAMOS`).
+   - Etiqueta inclinada estilo cinta adhesiva carmesí: `EDITORA JEFE`.
+   - Composición fotográfica con bloque rojo desfasado (`MADRID · PARÍS — AUREA '26`).
+   - Sello de papel kraft con monograma `LR` y cinta adhesiva translúcida.
+   - Cintilla vertical `DISPONIBLE PARA PROYECTOS` y botón circular `LET'S TALK`.
+3. **Manifiesto (Bloque Negro)**: Filosofía editorial, titular de gran escala y sello vintage giratorio de imprenta.
+4. **Servicios (`/ SERVICES`)**: Retícula de 4 columnas (Dirección Editorial, Identidad Visual, Creative Direction, Experiencia Digital).
+5. **Especialidades & Disciplinas (`/ EXPERTISE`)**: Tipografías apiladas, barras de porcentaje minimalistas y bloque terracota con asterisco `✱` y nota adhesiva *"Ideas que conmueven a las personas"*.
+6. **Portadas Seleccionadas (`/ SELECTED WORK`)**:
+   - `RITUÁL` — Alta costura escultural (Carmesí).
+   - `AUREA` — Arquitectura del estilo y elegancia clásica.
+   - `NÉCTAR` — Edición botánica y esencia oscura.
+   - `SABLE` — Campaña cinematográfica noir en blanco y negro.
+   - Cada portada es interactiva con visor modal en alta resolución.
+7. **Prensa & Testimonios (`/ PRESS & WORDS`)**: Crítica editorial de *It's Nice That*, logotipos de cabeceras (*Vogue, Wallpaper\*, Landor, Frame, Monocle*) y reseñas de la industria.
+8. **Contacto Directo (`/ GET IN TOUCH`)**: Acceso directo a WhatsApp, llamada telefónica, descarga de vCard en 1 clic y formulario editorial.
+9. **Dock Flotante Permanente**: Barra inferior de accesos rápidos para guardar el contacto en la agenda del móvil y escanear el QR en eventos presenciales.
