@@ -1,6 +1,6 @@
 # Tarjeta de Presentación Digital — Laura Ramos (AUREA)
 
-Tarjeta y portafolio web digital en diseño **Aura Glassmorphism Bento**, inspirado exactamente en la interfaz de widgets flotantes atmosféricos con degradados radiantes (*dusk peach, sage green, berry magenta, electric blue y terracotta*), reflejos de vidrio escarchado y silueta de alta costura con aura cromática difusa.
+Tarjeta y portafolio web digital en diseño **Artistic Torn Paper Collage ("not defined. A work in progress.")**, inspirado directamente en el cartelismo de vanguardia con retrato fragmentado de Laura Ramos en collage de papel rasgado, pliegues táctiles, contrastes analógicos, círculo terracota y tipografía brutalista de alta costura.
 
 ---
 
@@ -8,8 +8,8 @@ Tarjeta y portafolio web digital en diseño **Aura Glassmorphism Bento**, inspir
 
 - **Nombre**: Laura Ramos
 - **Cargo**: Editora jefe de AUREA
-- **Lema**: *"Cada portada, una declaración de estilo."*
-- **Fotografía**: [foto.jpg](file:///Users/itxasportatil/tarjeta-Laura-Ramos-/foto.jpg) (Retrato oficial) y [background_aura.jpg](file:///Users/itxasportatil/tarjeta-Laura-Ramos-/background_aura.jpg) (Composición de silueta con aura cromática)
+- **Lema**: *"not defined. A work in progress. Cada portada, una declaración de estilo."*
+- **Fotografía & Collage**: [poster_art.jpg](file:///Users/itxasportatil/tarjeta-Laura-Ramos-/poster_art.jpg) (Retrato oficial en collage de tiras de papel rasgado con bordes blancos de barbas sobre lienzo kraft)
 - **WhatsApp**: [+34 600 000 000](https://wa.me/34600000000)
 - **Teléfono**: [+34 600 000 000](tel:+34600000000)
 - **Email**: [lauraramos@aurearev.com](mailto:lauraramos@aurearev.com)
@@ -19,38 +19,26 @@ Tarjeta y portafolio web digital en diseño **Aura Glassmorphism Bento**, inspir
 
 ---
 
-## 🎨 Especificaciones del Estilo Visual (Aura Glass Bento)
+## 🎨 Especificaciones del Cartel Artístico ("not defined.")
 
-1. **Fondo de Silueta con Aura Cromática**:
-   - Fondo de estudio luminoso con silueta artística de perfil interactuando con su dispositivo móvil.
-   - Borde con efecto cromático halo/aura termoluminiscente en tonalidades menta, cian y violeta difuso.
-   - Viñeteado ambiental sutil que otorga profundidad tridimensional a los widgets flotantes.
-
-2. **Cluster Central Bento (5 Widgets de Vidrio Líquido Escarchado)**:
-   - **Card 1 (Superior Ancha - Dusk Peach & Mauve)**:
-     - Degradado de atardecer rosado/malva escarchado (`backdrop-filter: blur(28px)`).
-     - Insignia circular con anillo punteado matricial y bucle curvo orgánico dorado superior.
-     - Muestra el titular de Laura Ramos / métrica visual y abre la biografía y manifiesto editorial.
-   - **Card 2 (Intermedia Izquierda - Sage Green Aura)**:
-     - Vidrio verde salvia con centro oscuro y barra de gradiente horizontal con marcador triangular dorado.
-     - Indicador de disponibilidad inmediata al 100% con enlace directo a WhatsApp.
-   - **Card 3 (Intermedia Derecha - Berry Magenta Aura)**:
-     - Orbe central magenta y fucsia radiante con carril de puntos y punto activo pulsante.
-     - Acceso interactivo a la galería de las 4 portadas de AUREA (*RITUÁL, AUREA, NÉCTAR, SABLE*).
-   - **Card 4 (Inferior Izquierda - Electric Cobalt Blue Aura)**:
-     - Vidrio azul cobalto y zafiro con aura profunda, valor e insignia de prestigio.
-     - Abre el panel de reconocimientos y prensa internacional (*Vogue, Wallpaper\*, Frame, Monocle*).
-   - **Card 5 (Inferior Derecha - Terracotta & Electric Blue Spot)**:
-     - Vidrio terracota tostado con una esfera azul eléctrico radiante en el lateral derecho.
-     - Descarga automática en 1 clic de la tarjeta vCard (`.vcf`) a la agenda del smartphone.
-
-3. **Controles Flotantes**:
-   - **Botón Superior Izquierdo (`←`)**: Botón circular de vidrio blanco esmerilado que despliega el perfil de Laura Ramos.
-   - **Píldora Superior Derecha (`AUREA '26 / EDITORIAL LR`)**: Conmutador dinámico que permite alternar entre los textos exactos de la imagen de referencia y los datos y métricas editoriales de Laura Ramos.
-   - **Stack Flotante Inferior Derecho**:
-     - Botón `⤢` (Expandir): Despliega la hoja de servicios editoriales y formulario de propuesta.
-     - Botón `Compartir`: Genera el código QR instantáneo y permite copiar el enlace o compartir vía API nativa.
-
-4. **Hojas Modales de Vidrio Escarchado (Bottom Sheets)**:
-   - Animación fluida con deslizamiento inferior y desenfoque inmersivo del fondo.
-   - Compatibilidad total con gestos táctiles, tecla `Escape` y cierre al tocar fuera.
+1. **Titular Monumental**:
+   - `not defined.` en tipografía geométrica bold minúscula con trazo manual en terracota (`#C84B31`) debajo de `defined.`.
+2. **Sello Circular Giratorio**:
+   - `THESE PIECES · THESE PIECES · THESE PIECES ·` con rotación continua suave y apertura de biografía al interactuar.
+3. **Bloque Tipo Máquina Superior Derecho**:
+   - Manifiesto: `We change. / We hide. / We grow. / We bloom. / We are.` acompañado de la columna de 3 triángulos descendentes `▼ ▼ ▼`.
+4. **Collage Central de Laura Ramos**:
+   - Retrato en blanco y negro de película analógica fragmentado en tiras de papel rasgado con bordes orgánicos texturizados.
+   - Sol/círculo terracota quemado de fondo en la esquina superior derecha.
+   - Pliegues de papel cruzados (líneas de hendidura de póster doblado).
+5. **Texto Manuscrito en Terracota**:
+   - Frase caligráfica `A work in progress.` con trazo fluido subrayado.
+6. **Elementos de la Base**:
+   - Asterisco `✱` y lema `NOT FRAGILE. JUST REAL.`.
+   - Bloque de trama rasterizada halftone en el centro.
+   - Sello de año enmarcado con línea divisoria `[ 20 | 26 ]`.
+7. **Dock de Acciones Táctiles**:
+   - Botón destacado terracota `💾 GUARDAR VCARD` para descarga en 1 clic.
+   - Botón directo de `💬 WHATSAPP`.
+   - Botón de `📱 CÓDIGO QR` para escanear en eventos.
+   - Enlaces directos a Portadas AUREA (*RITUÁL, AUREA, NÉCTAR, SABLE*), datos oficiales y compartir perfil.

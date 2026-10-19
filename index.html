@@ -3,45 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>LAURA RAMOS — Editora Jefe de AUREA | Tarjeta Digital</title>
-  <meta name="description" content="Tarjeta digital de presentación de Laura Ramos, Editora Jefe de AUREA. Dirección editorial, cultura visual y alta costura.">
+  <title>LAURA RAMOS — not defined. | AUREA Magazine</title>
+  <meta name="description" content="Tarjeta de presentación y portfolio digital de Laura Ramos, Editora Jefe de AUREA. 'not defined. A work in progress.'">
   
-  <!-- Open Graph / Redes Sociales -->
-  <meta property="og:title" content="LAURA RAMOS — Editora Jefe de AUREA">
-  <meta property="og:description" content="Cada portada, una declaración de estilo. Dirección editorial, estrategia de marca y cultura visual.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="LAURA RAMOS — not defined. | AUREA">
+  <meta property="og:description" content="Cada portada, una declaración de estilo. Dirección editorial, cultura visual y alta costura.">
   <meta property="og:type" content="profile">
-  <meta property="og:image" content="foto.jpg">
+  <meta property="og:image" content="poster_art.jpg">
 
-  <!-- Google Fonts: Plus Jakarta Sans, Space Mono y Playfair Display -->
+  <!-- Google Fonts: Plus Jakarta Sans (Grotesk titular), Space Mono (Metadatos máquina), Caveat (Script manual), Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
   <style>
     /* ==========================================================================
-       VARIABLES Y SISTEMA DE DISEÑO AURA GLASSMORPHISM
-       Inspirado exactamente en el estilo bento widget de la imagen de referencia
+       VARIABLES Y PALETA EDITORIAL "NOT DEFINED" / TORN PAPER COLLAGE
        ========================================================================== */
     :root {
-      --bg-ambient: #E8E5DF;
-      --card-radius: 28px;
-      --card-border: 1px solid rgba(255, 255, 255, 0.16);
-      --card-inner-highlight: inset 0 1px 1px 0 rgba(255, 255, 255, 0.28);
-      --card-shadow: 0 18px 42px rgba(0, 0, 0, 0.24), 0 4px 12px rgba(0, 0, 0, 0.12);
+      --paper-cream: #EFE9DE;
+      --paper-warm: #E6DFD2;
+      --paper-dark: #D4CCC0;
       
-      /* Tipografía */
-      --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --ink-black: #111111;
+      --ink-soft: #262626;
+      --ink-muted: #58554F;
+      
+      --terracotta: #C84B31;
+      --terracotta-dark: #A73822;
+      --terracotta-glow: rgba(200, 75, 49, 0.25);
+      
+      --font-headline: 'Plus Jakarta Sans', -apple-system, sans-serif;
       --font-mono: 'Space Mono', monospace;
-      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-script: 'Caveat', cursive, sans-serif;
+      --font-sans: 'Inter', sans-serif;
       
-      /* Acentos cromáticos */
-      --yellow-accent: #F4CE58;
-      --yellow-glow: rgba(244, 206, 88, 0.45);
-      --crimson-glow: #E05368;
-      --sage-green: #6EAF8C;
-      --magenta-berry: #E52E7A;
-      --electric-blue: #2B6BFF;
-      --terracotta: #BE562C;
+      --card-radius: 34px;
     }
 
     * {
@@ -53,521 +51,483 @@
 
     html {
       scroll-behavior: smooth;
-      background-color: var(--bg-ambient);
-      font-family: var(--font-main);
-      color: #FFFFFF;
+      background-color: #D6D0C5;
+      font-family: var(--font-headline);
+      color: var(--ink-black);
     }
 
     body {
       min-height: 100dvh;
-      background-color: var(--bg-ambient);
-      position: relative;
-      overflow-x: hidden;
+      background-color: #D6D0C5;
+      background-image: 
+        radial-gradient(circle at 50% 12%, rgba(255, 255, 255, 0.5) 0%, transparent 60%),
+        radial-gradient(circle at 85% 85%, rgba(0, 0, 0, 0.08) 0%, transparent 50%);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      -webkit-font-smoothing: antialiased;
+      padding: 20px 16px 36px;
+      overflow-x: hidden;
+      position: relative;
     }
 
-    /* Fondo fotográfico ambiental con aura cromática */
-    .ambient-background-layer {
+    /* Grano de textura táctil de imprenta */
+    .film-grain-overlay {
       position: fixed;
       inset: 0;
-      z-index: 0;
-      background-image: url('background_aura.jpg');
-      background-position: center 30%;
-      background-size: cover;
-      background-repeat: no-repeat;
       pointer-events: none;
-      filter: brightness(1.02) contrast(1.04);
-      transform: scale(1.01);
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    /* Capa de iluminación suave y viñeteado cinematográfico */
-    .ambient-vignette-layer {
-      position: fixed;
-      inset: 0;
-      z-index: 1;
-      pointer-events: none;
-      background: radial-gradient(circle at 50% 45%, rgba(245, 242, 236, 0.12) 0%, rgba(220, 215, 205, 0.45) 80%, rgba(180, 175, 165, 0.72) 100%);
-      mix-blend-mode: multiply;
+      z-index: 999;
+      opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
     }
 
     /* ==========================================================================
-       CANVAS Y CONTENEDOR DEL DISPOSITIVO / TARJETA
+       EL CARTEL / TARJETA POSTER (IDÉNTICO A LA FOTO DE REFERENCIA)
        ========================================================================== */
-    .app-viewport {
+    .poster-card-wrapper {
       position: relative;
-      z-index: 10;
       width: 100%;
       max-width: 430px;
-      min-height: 100dvh;
-      padding: 24px 20px 40px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
       margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    /* ==========================================================================
-       BARRA SUPERIOR DE CONTROLES FLOTANTES
-       ========================================================================== */
-    .top-controls-bar {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-      padding-top: 4px;
-    }
-
-    .floating-circle-btn {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.94);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #1A1A1A;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+    .poster-card-container {
       position: relative;
-      user-select: none;
-    }
-
-    .floating-circle-btn:hover {
-      transform: scale(1.06);
-      background: #FFFFFF;
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
-    }
-
-    .floating-circle-btn:active {
-      transform: scale(0.94);
-    }
-
-    .floating-circle-btn svg {
-      width: 22px;
-      height: 22px;
-      stroke-width: 2.2;
-    }
-
-    /* Selector de Modo (Editorial vs Foto Exacta) */
-    .mode-toggle-pill {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      background: rgba(255, 255, 255, 0.86);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      padding: 6px 14px;
-      border-radius: 30px;
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-      color: #1F1F1F;
-      font-size: 0.73rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      user-select: none;
-    }
-
-    .mode-toggle-pill:hover {
-      background: #FFFFFF;
-      transform: scale(1.02);
-    }
-
-    .pulse-dot-green {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #16A34A;
-      box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.6);
-      animation: pulseGreen 2.2s infinite;
-    }
-
-    @keyframes pulseGreen {
-      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7); }
-      70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(22, 163, 74, 0); }
-      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
-    }
-
-    /* ==========================================================================
-       EL CLUSTER DE WIDGETS BENTO (ESTILO EXACTO A LA IMAGEN)
-       ========================================================================== */
-    .bento-widgets-grid {
       width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 13px;
-      margin: auto 0;
-      padding: 10px 0;
-    }
-
-    .bento-card {
-      position: relative;
+      aspect-ratio: 1 / 1.38;
+      background-color: var(--paper-cream);
       border-radius: var(--card-radius);
-      border: var(--card-border);
-      box-shadow: var(--card-shadow);
-      padding: 20px 22px;
+      box-shadow: 
+        0 24px 60px rgba(0, 0, 0, 0.22),
+        0 8px 24px rgba(0, 0, 0, 0.12),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.65);
       overflow: hidden;
-      cursor: pointer;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
-      backdrop-filter: blur(28px) saturate(180%);
-      -webkit-backdrop-filter: blur(28px) saturate(180%);
+      padding: 28px 24px 26px;
       user-select: none;
+      transform: translateZ(0);
     }
 
-    .bento-card:hover {
-      transform: translateY(-3px) scale(1.015);
-      box-shadow: 0 22px 48px rgba(0, 0, 0, 0.3), 0 6px 16px rgba(0, 0, 0, 0.16);
-    }
-
-    .bento-card:active {
-      transform: scale(0.975);
-    }
-
-    /* Reflejo de luz interior sutil (Glass highlight) */
-    .bento-card::after {
-      content: '';
+    /* Fondo artístico con el collage de Laura, círculo terracota y pliegues */
+    .poster-art-bg {
       position: absolute;
       inset: 0;
-      border-radius: inherit;
-      box-shadow: var(--card-inner-highlight);
+      background-image: url('poster_art.jpg');
+      background-position: center bottom;
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: 1;
+      pointer-events: none;
+      filter: contrast(1.02) brightness(1.01);
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .poster-card-container:hover .poster-art-bg {
+      transform: scale(1.015);
+    }
+
+    /* Líneas de pliegue de papel horizontal y vertical */
+    .crease-horizontal {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1.5px;
+      background: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.08) 20%, rgba(255, 255, 255, 0.35) 50%, rgba(0, 0, 0, 0.08) 80%, transparent 100%);
+      z-index: 2;
       pointer-events: none;
     }
 
-    /* Tipografía estándar de tarjetas */
-    .card-label {
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: rgba(255, 255, 255, 0.88);
-      letter-spacing: -0.01em;
-      line-height: 1.2;
+    .crease-vertical {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 1.5px;
+      background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.08) 20%, rgba(255, 255, 255, 0.35) 50%, rgba(0, 0, 0, 0.08) 80%, transparent 100%);
       z-index: 2;
-      transition: opacity 0.2s ease;
+      pointer-events: none;
     }
 
-    .card-value-group {
+    /* ==========================================================================
+       TIPOGRAFÍAS Y ELEMENTOS GRÁFICOS SUPERIORES
+       ========================================================================== */
+    .poster-top-bar {
+      position: relative;
+      z-index: 10;
       display: flex;
-      align-items: baseline;
-      gap: 6px;
-      z-index: 2;
-    }
-
-    .card-big-value {
-      font-size: 2.15rem;
-      font-weight: 600;
-      line-height: 1;
-      letter-spacing: -0.03em;
-      color: #FFFFFF;
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
-    }
-
-    .card-unit {
-      font-size: 0.88rem;
-      font-weight: 400;
-      color: rgba(255, 255, 255, 0.85);
-      letter-spacing: -0.01em;
-    }
-
-    /* --------------------------------------------------------------------------
-       CARD 1: TOP FULL-WIDTH (DUSK PEACH / MAUVE AURA)
-       -------------------------------------------------------------------------- */
-    .card-top-wide {
-      grid-column: 1 / -1;
-      min-height: 140px;
-      background: 
-        radial-gradient(circle at 82% 70%, rgba(224, 112, 118, 0.52) 0%, transparent 58%),
-        radial-gradient(circle at 20% 30%, rgba(135, 75, 95, 0.3) 0%, transparent 60%),
-        linear-gradient(135deg, rgba(58, 38, 48, 0.88) 0%, rgba(78, 48, 60, 0.88) 100%);
-      display: flex;
-      flex-direction: row;
-      align-items: center;
       justify-content: space-between;
-      padding: 22px 24px;
+      align-items: flex-start;
+      width: 100%;
     }
 
-    .card-top-left-content {
+    /* Titular Principal Izquierdo: "not defined." */
+    .title-group {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      height: 100%;
-      z-index: 2;
     }
 
-    .card-subtitle-badge {
-      font-size: 0.74rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: rgba(255, 255, 255, 0.7);
-      margin-bottom: 2px;
+    .headline-not-defined {
+      font-size: 3.1rem;
+      font-weight: 900;
+      line-height: 0.88;
+      letter-spacing: -0.04em;
+      color: var(--ink-black);
+      text-transform: lowercase;
     }
 
-    .card-top-name {
-      font-size: 1.5rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: #FFFFFF;
-      line-height: 1.1;
+    /* Trazo Manual Terracota bajo "defined." */
+    .brush-underline-svg {
+      width: 145px;
+      height: 14px;
+      margin-top: 5px;
+      display: block;
     }
 
-    .card-top-role {
-      font-size: 0.85rem;
-      color: rgba(255, 255, 255, 0.82);
-      font-weight: 400;
-      margin-top: 4px;
+    /* Sello circular giratorio ("THESE PIECES · THESE PIECES") */
+    .stamp-pieces-wrap {
+      position: absolute;
+      top: 130px;
+      left: 4px;
+      width: 74px;
+      height: 74px;
+      z-index: 12;
+      cursor: pointer;
+      animation: rotateStamp 24s linear infinite;
+      transition: transform 0.3s ease;
     }
 
-    /* Insignia Circular con Círculo Punteado y Bucle Dorado */
-    .gauge-circle-container {
-      position: relative;
-      width: 76px;
-      height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      z-index: 2;
+    .stamp-pieces-wrap:hover {
+      animation-play-state: paused;
+      transform: scale(1.12);
     }
 
-    .gauge-circle-svg {
+    @keyframes rotateStamp {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .stamp-svg {
       width: 100%;
       height: 100%;
-      transform: rotate(0deg);
       overflow: visible;
     }
 
-    .gauge-center-text {
-      position: absolute;
-      font-family: var(--font-mono);
-      font-size: 1.28rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      color: #FFFFFF;
-      text-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
-    }
-
-    /* --------------------------------------------------------------------------
-       CARD 2: TIME IN RANGE (SAGE GREEN AURA CON SLIDER)
-       -------------------------------------------------------------------------- */
-    .card-sage-green {
-      min-height: 135px;
-      background: 
-        radial-gradient(circle at 50% 50%, rgba(110, 175, 140, 0.38) 0%, transparent 68%),
-        linear-gradient(145deg, rgba(38, 58, 50, 0.88) 0%, rgba(22, 36, 30, 0.88) 100%);
-    }
-
-    .slider-track-wrap {
-      position: relative;
-      width: 100%;
-      margin: 14px 0 12px;
-      z-index: 2;
-    }
-
-    .slider-gradient-line {
-      width: 100%;
-      height: 3px;
-      border-radius: 2px;
-      background: linear-gradient(90deg, #6B8B7B 0%, #B86B72 65%, #DE5E6B 100%);
-      position: relative;
-    }
-
-    .slider-pointer-triangle {
-      position: absolute;
-      right: 22%;
-      top: -9px;
-      width: 0;
-      height: 0;
-      border-left: 5px solid transparent;
-      border-right: 5px solid transparent;
-      border-bottom: 7px solid var(--yellow-accent);
-      filter: drop-shadow(0 2px 4px var(--yellow-glow));
-      animation: gentleFloat 3s ease-in-out infinite;
-    }
-
-    @keyframes gentleFloat {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-2px); }
-    }
-
-    /* --------------------------------------------------------------------------
-       CARD 3: VARIABILITY (MAGENTA / BERRY AURA CON PUNTOS)
-       -------------------------------------------------------------------------- */
-    .card-magenta-berry {
-      min-height: 135px;
-      background: 
-        radial-gradient(circle at 62% 48%, rgba(229, 46, 122, 0.72) 0%, transparent 58%),
-        linear-gradient(145deg, rgba(68, 18, 46, 0.9) 0%, rgba(36, 10, 26, 0.9) 100%);
-    }
-
-    .dots-track-wrap {
+    /* Texto Tipo Máquina Superior Derecho ("We change...") y 3 Triángulos */
+    .top-right-meta {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      margin: 14px 0 12px;
-      z-index: 2;
-      padding: 0 2px;
+      align-items: flex-start;
+      gap: 10px;
+      text-align: left;
     }
 
-    .track-dot {
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.65);
-      transition: transform 0.2s ease;
-    }
-
-    .track-dot.active {
-      width: 6px;
-      height: 6px;
-      background: #FFFFFF;
-      box-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
-      animation: dotPulse 1.8s infinite;
-    }
-
-    @keyframes dotPulse {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.3); opacity: 0.8; }
-    }
-
-    /* --------------------------------------------------------------------------
-       CARD 4: VITAMIN D (ELECTRIC COBALT BLUE AURA)
-       -------------------------------------------------------------------------- */
-    .card-cobalt-blue {
-      min-height: 135px;
-      background: 
-        radial-gradient(circle at 45% 68%, rgba(43, 107, 255, 0.78) 0%, transparent 62%),
-        radial-gradient(circle at 80% 20%, rgba(20, 50, 140, 0.4) 0%, transparent 60%),
-        linear-gradient(145deg, rgba(14, 28, 68, 0.9) 0%, rgba(8, 16, 42, 0.9) 100%);
-    }
-
-    .card-status-badge {
-      font-size: 0.88rem;
-      font-weight: 500;
-      color: rgba(255, 255, 255, 0.86);
-      margin-left: auto;
+    .typewriter-text {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      line-height: 1.34;
+      color: var(--ink-soft);
       letter-spacing: -0.01em;
     }
 
-    /* --------------------------------------------------------------------------
-       CARD 5: SPIKES (TERRACOTTA CON ORBE AZUL RADIANTE)
-       -------------------------------------------------------------------------- */
-    .card-terracotta-blue {
-      min-height: 135px;
-      background: 
-        radial-gradient(circle at 84% 50%, rgba(43, 107, 255, 0.82) 0%, rgba(30, 80, 220, 0.35) 42%, transparent 56%),
-        linear-gradient(145deg, rgba(182, 80, 40, 0.92) 0%, rgba(135, 54, 24, 0.92) 100%);
-    }
-
-    /* Stack de botones flotantes inferiores a la derecha */
-    .bottom-right-controls {
-      position: fixed;
-      right: 20px;
-      bottom: 24px;
-      z-index: 50;
+    .triangles-stack {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 3px;
+      padding-top: 1px;
     }
 
-    @media (min-width: 480px) {
-      .bottom-right-controls {
-        position: absolute;
-        right: 20px;
-        bottom: 24px;
-      }
+    .triangles-stack span {
+      font-size: 0.7rem;
+      color: var(--ink-black);
+      line-height: 1;
+      transform: scaleY(0.9);
     }
 
     /* ==========================================================================
-       MODAL Y HOJAS DE DETALLE (BOTTOM SHEETS EN ESTILO AURA GLASS)
+       ELEMENTOS GRÁFICOS CENTRALES E INFERIORES
        ========================================================================== */
-    .modal-overlay {
+    .poster-middle-row {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin: auto 0 10px;
+    }
+
+    /* Texto Manuscrito en Terracota ("A work in progress.") */
+    .script-handwritten {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transform: rotate(-3deg);
+      cursor: pointer;
+      transition: transform 0.25s ease;
+      margin-right: 6px;
+    }
+
+    .script-handwritten:hover {
+      transform: rotate(0deg) scale(1.08);
+    }
+
+    .script-text {
+      font-family: var(--font-script);
+      font-size: 2.35rem;
+      font-weight: 700;
+      color: var(--terracotta);
+      line-height: 0.95;
+      letter-spacing: 0.02em;
+      text-shadow: 0 0 1px rgba(200, 75, 49, 0.2);
+    }
+
+    .script-underline-svg {
+      width: 125px;
+      height: 9px;
+      margin-top: 2px;
+    }
+
+    /* Barra Inferior del Poster: Asterisco, Halftone y Sello 2026 */
+    .poster-bottom-bar {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 100%;
+      padding-top: 6px;
+    }
+
+    /* Asterisco y "NOT FRAGILE. JUST REAL." */
+    .bottom-left-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .asterisk-icon {
+      font-size: 1.6rem;
+      font-weight: 900;
+      line-height: 1;
+      color: var(--ink-black);
+    }
+
+    .not-fragile-text {
+      font-family: var(--font-mono);
+      font-size: 0.67rem;
+      font-weight: 700;
+      line-height: 1.35;
+      letter-spacing: 0.04em;
+      color: var(--ink-black);
+      text-transform: uppercase;
+    }
+
+    /* Patrón de Halftone Raster Central */
+    .bottom-center-halftone {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.85;
+      margin-bottom: 2px;
+    }
+
+    /* Sello Enmarcado [ 20 | 26 ] */
+    .bottom-right-box-stamp {
+      width: 32px;
+      height: 40px;
+      border: 1.5px solid var(--ink-black);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3px 0;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--ink-black);
+      background: rgba(239, 233, 222, 0.4);
+      backdrop-filter: blur(2px);
+    }
+
+    .box-divider-line {
+      width: 80%;
+      height: 1.2px;
+      background-color: var(--ink-black);
+    }
+
+    /* ==========================================================================
+       DOCK DE ACCIONES TÁCTILES EDITORIALES (TARJETA DIGITAL DE PRESENTACIÓN)
+       ========================================================================== */
+    .editorial-action-dock {
+      width: 100%;
+      max-width: 430px;
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 10px;
+      z-index: 20;
+    }
+
+    .dock-pill-btn {
+      padding: 13px 14px;
+      background: var(--ink-black);
+      color: var(--paper-cream);
+      border: 1.5px solid var(--ink-black);
+      border-radius: 16px;
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      user-select: none;
+    }
+
+    .dock-pill-btn:hover {
+      background: var(--terracotta);
+      border-color: var(--terracotta);
+      color: #FFFFFF;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px var(--terracotta-glow);
+    }
+
+    .dock-pill-btn:active {
+      transform: scale(0.96);
+    }
+
+    .dock-pill-btn.btn-vcard-accent {
+      background: var(--terracotta);
+      border-color: var(--terracotta);
+      color: #FFFFFF;
+    }
+
+    .dock-pill-btn.btn-vcard-accent:hover {
+      background: var(--terracotta-dark);
+      border-color: var(--terracotta-dark);
+    }
+
+    /* Fila secundaria de accesos rápidos */
+    .dock-secondary-row {
+      width: 100%;
+      max-width: 430px;
+      margin-top: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 6px;
+    }
+
+    .dock-sub-link {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--ink-soft);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: color 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .dock-sub-link:hover {
+      color: var(--terracotta);
+    }
+
+    /* ==========================================================================
+       HOJAS MODALES EDITORIALES (TORN PAPER & KRAFT SHEET)
+       ========================================================================== */
+    .modal-backdrop {
       position: fixed;
       inset: 0;
-      z-index: 100;
-      background: rgba(14, 12, 18, 0.65);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      z-index: 1000;
+      background: rgba(18, 18, 18, 0.75);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       display: flex;
       align-items: flex-end;
       justify-content: center;
       opacity: 0;
       visibility: hidden;
-      transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
+      transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .modal-overlay.active {
+    .modal-backdrop.active {
       opacity: 1;
       visibility: visible;
     }
 
-    .modal-sheet {
+    .modal-paper-sheet {
       width: 100%;
-      max-width: 460px;
-      max-height: 88dvh;
-      background: rgba(26, 22, 32, 0.88);
-      backdrop-filter: blur(36px) saturate(200%);
-      -webkit-backdrop-filter: blur(36px) saturate(200%);
-      border: 1px solid rgba(255, 255, 255, 0.18);
+      max-width: 450px;
+      max-height: 86dvh;
+      background: var(--paper-cream);
+      border-radius: 30px 30px 0 0;
+      border: 1.5px solid var(--ink-black);
       border-bottom: none;
-      border-radius: 32px 32px 0 0;
-      box-shadow: 0 -16px 48px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+      box-shadow: 0 -16px 48px rgba(0, 0, 0, 0.4);
       padding: 16px 24px 36px;
       overflow-y: auto;
       transform: translateY(100%);
-      transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1);
-      color: #FFFFFF;
+      transition: transform 0.36s cubic-bezier(0.16, 1, 0.3, 1);
+      color: var(--ink-black);
+      position: relative;
     }
 
-    .modal-overlay.active .modal-sheet {
+    .modal-backdrop.active .modal-paper-sheet {
       transform: translateY(0);
     }
 
-    .modal-handle-bar {
+    .sheet-handle {
       width: 44px;
       height: 4.5px;
       border-radius: 3px;
-      background: rgba(255, 255, 255, 0.3);
-      margin: 0 auto 18px;
+      background: rgba(18, 18, 18, 0.25);
+      margin: 0 auto 16px;
       cursor: pointer;
     }
 
-    .modal-header-row {
+    .sheet-header-row {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       margin-bottom: 20px;
+      border-bottom: 1.5px solid rgba(18, 18, 18, 0.15);
+      padding-bottom: 12px;
     }
 
-    .modal-title {
-      font-size: 1.35rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
+    .sheet-title {
+      font-size: 1.5rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      text-transform: uppercase;
     }
 
-    .modal-close-btn {
-      width: 36px;
-      height: 36px;
+    .sheet-close-btn {
+      width: 34px;
+      height: 34px;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.12);
+      background: var(--ink-black);
+      color: var(--paper-cream);
       border: none;
-      color: #FFFFFF;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -575,833 +535,538 @@
       transition: background 0.2s ease;
     }
 
-    .modal-close-btn:hover {
-      background: rgba(255, 255, 255, 0.22);
+    .sheet-close-btn:hover {
+      background: var(--terracotta);
     }
 
-    /* Acciones Rápidas en Modales */
-    .action-button-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .glass-action-btn {
-      width: 100%;
-      padding: 15px 20px;
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      color: #FFFFFF;
-      font-family: var(--font-main);
-      font-size: 0.95rem;
-      font-weight: 600;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      cursor: pointer;
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .glass-action-btn:hover {
-      background: rgba(255, 255, 255, 0.2);
-      transform: translateY(-1px);
-    }
-
-    .glass-action-btn.btn-highlight {
-      background: linear-gradient(135deg, rgba(224, 83, 104, 0.9) 0%, rgba(180, 50, 75, 0.9) 100%);
-      border: 1px solid rgba(255, 255, 255, 0.28);
-      box-shadow: 0 8px 24px rgba(224, 83, 104, 0.35);
-    }
-
-    .glass-action-btn.btn-highlight:hover {
-      background: linear-gradient(135deg, rgba(235, 95, 115, 0.95) 0%, rgba(195, 60, 85, 0.95) 100%);
-      box-shadow: 0 10px 28px rgba(224, 83, 104, 0.45);
-    }
-
-    .btn-icon-label {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .btn-icon-label svg {
-      width: 20px;
-      height: 20px;
-    }
-
-    /* Galería de Portadas en Sheet */
-    .covers-grid-sheet {
+    /* Galería de Portadas de AUREA */
+    .covers-sheet-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 14px;
+      gap: 14px;
+      margin: 16px 0 24px;
     }
 
-    .cover-card-mini {
-      border-radius: 18px;
+    .cover-card-editorial {
+      background: #FFFFFF;
+      border: 1.5px solid var(--ink-black);
+      border-radius: 14px;
       overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      background: rgba(0, 0, 0, 0.3);
       cursor: pointer;
-      transition: transform 0.25s ease;
-      position: relative;
+      transition: transform 0.2s ease;
     }
 
-    .cover-card-mini:hover {
-      transform: scale(1.03);
+    .cover-card-editorial:hover {
+      transform: translateY(-3px);
     }
 
-    .cover-img-box {
+    .cover-image-holder {
       width: 100%;
       aspect-ratio: 3/4;
       overflow: hidden;
     }
 
-    .cover-img-box img {
+    .cover-image-holder img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
-      transition: transform 0.4s ease;
     }
 
-    .cover-card-mini:hover .cover-img-box img {
-      transform: scale(1.05);
+    .cover-card-footer {
+      padding: 8px 10px;
+      background: var(--paper-warm);
+      border-top: 1px solid var(--ink-black);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
     }
 
-    .cover-meta-caption {
-      padding: 10px 12px;
-      background: rgba(18, 14, 24, 0.85);
-      backdrop-filter: blur(12px);
-    }
-
-    .cover-name-txt {
+    /* Tarjetas de contacto dentro del modal */
+    .contact-item-btn {
+      width: 100%;
+      padding: 14px 18px;
+      border-radius: 14px;
+      background: #FFFFFF;
+      border: 1.5px solid var(--ink-black);
+      color: var(--ink-black);
+      font-family: var(--font-mono);
       font-size: 0.85rem;
       font-weight: 700;
-      letter-spacing: 0.05em;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
     }
 
-    .cover-edition-txt {
-      font-size: 0.7rem;
-      color: rgba(255, 255, 255, 0.6);
-      margin-top: 2px;
+    .contact-item-btn:hover {
+      background: var(--ink-black);
+      color: var(--paper-cream);
+      transform: translateY(-1px);
     }
 
-    /* QR Code Box */
-    .qr-container-box {
+    .contact-item-btn.accent-btn {
+      background: var(--terracotta);
+      border-color: var(--terracotta);
+      color: #FFFFFF;
+    }
+
+    .contact-item-btn.accent-btn:hover {
+      background: var(--terracotta-dark);
+      border-color: var(--terracotta-dark);
+    }
+
+    /* Código QR en Modal */
+    .qr-frame-box {
+      width: 190px;
+      height: 190px;
       background: #FFFFFF;
-      padding: 16px;
-      border-radius: 20px;
+      border: 1.5px solid var(--ink-black);
+      border-radius: 18px;
+      margin: 16px auto;
+      padding: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 190px;
-      height: 190px;
-      margin: 16px auto;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
     }
 
-    .qr-container-box img {
+    .qr-frame-box img {
       width: 100%;
       height: 100%;
       object-fit: contain;
     }
 
-    /* Servicios en Sheet */
-    .service-pill-item {
-      padding: 14px 18px;
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.07);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      margin-bottom: 10px;
-    }
-
-    .service-pill-title {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: #FFFFFF;
-      margin-bottom: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .service-pill-desc {
-      font-size: 0.82rem;
-      color: rgba(255, 255, 255, 0.72);
-      line-height: 1.35;
-    }
-
-    /* Formulario Editorial */
-    .form-input-aura {
-      width: 100%;
-      padding: 12px 16px;
-      border-radius: 14px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      color: #FFFFFF;
-      font-family: var(--font-main);
-      font-size: 0.9rem;
-      margin-bottom: 12px;
-      outline: none;
-      transition: border-color 0.2s ease;
-    }
-
-    .form-input-aura:focus {
-      border-color: var(--yellow-accent);
-      background: rgba(255, 255, 255, 0.12);
-    }
-
-    .form-input-aura::placeholder {
-      color: rgba(255, 255, 255, 0.45);
-    }
-
-    /* Feedback Toast */
-    .feedback-toast {
+    /* Toast de Feedback */
+    .editorial-toast {
       position: fixed;
       bottom: 28px;
       left: 50%;
       transform: translateX(-50%) translateY(90px);
-      background: rgba(25, 22, 30, 0.92);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      padding: 12px 24px;
-      border-radius: 30px;
+      background: var(--ink-black);
+      color: var(--paper-cream);
+      border: 1.5px solid var(--terracotta);
+      padding: 12px 22px;
+      border-radius: 24px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
       box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
-      color: #FFFFFF;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      z-index: 200;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      z-index: 2000;
       opacity: 0;
       pointer-events: none;
-      transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .feedback-toast.show {
+    .editorial-toast.show {
       transform: translateX(-50%) translateY(0);
       opacity: 1;
-    }
-
-    /* Avatar Modal Preview */
-    .avatar-preview-wrap {
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      margin: 0 auto 16px;
-      overflow: hidden;
-      border: 2px solid rgba(255, 255, 255, 0.4);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-    }
-
-    .avatar-preview-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* Testimonios quotes */
-    .quote-box-aura {
-      padding: 14px 18px;
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      margin-bottom: 10px;
-    }
-
-    .quote-text-aura {
-      font-style: italic;
-      font-size: 0.86rem;
-      color: rgba(255, 255, 255, 0.88);
-      line-height: 1.4;
-      margin-bottom: 6px;
-    }
-
-    .quote-author-aura {
-      font-size: 0.74rem;
-      font-weight: 700;
-      color: var(--yellow-accent);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
     }
   </style>
 </head>
 <body>
 
-  <!-- Capa 1: Fondo fotográfico de silueta con aura cromática (Exacto a la foto de referencia) -->
-  <div class="ambient-background-layer" id="bg-layer"></div>
+  <!-- Capa con textura sutil de grano analógico -->
+  <div class="film-grain-overlay"></div>
 
-  <!-- Capa 2: Iluminación ambiental y viñeteado difuso -->
-  <div class="ambient-vignette-layer"></div>
+  <!-- WRAPPER PRINCIPAL DEL POSTER CARD -->
+  <div class="poster-card-wrapper">
 
-  <!-- VIEWPORT PRINCIPAL DE LA APLICACIÓN / TARJETA DIGITAL -->
-  <main class="app-viewport">
+    <!-- EL CARTEL CENTRAL (IDÉNTICO A LA FOTO DE REFERENCIA) -->
+    <article class="poster-card-container" id="art-card" aria-label="Tarjeta Digital Laura Ramos">
+      
+      <!-- Fondo artístico del collage de Laura Ramos con el círculo terracota y textura -->
+      <div class="poster-art-bg"></div>
 
-    <!-- BARRA SUPERIOR DE CONTROLES FLOTANTES -->
-    <header class="top-controls-bar">
-      <!-- Botón Circular Flotante Izquierdo: Volver / Perfil Laura -->
-      <button class="floating-circle-btn" id="btn-top-back" title="Perfil y Biografía de Laura" aria-label="Volver o abrir perfil">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-          <line x1="19" y1="12" x2="5" y2="12"></line>
-          <polyline points="12 19 5 12 12 5"></polyline>
-        </svg>
-      </button>
+      <!-- Líneas de pliegue de papel horizontal y vertical -->
+      <div class="crease-horizontal"></div>
+      <div class="crease-vertical"></div>
 
-      <!-- Selector de Modo de Visualización (Alterna entre los textos exactos de la foto y los datos editoriales) -->
-      <div class="mode-toggle-pill" id="mode-toggle-btn" title="Alternar entre textos de la foto y datos editoriales">
-        <span class="pulse-dot-green"></span>
-        <span id="mode-label-text">AUREA '26</span>
-      </div>
-    </header>
-
-    <!-- EL CLUSTER BENTO CENTRAL (IDÉNTICO A LA FOTO DE REFERENCIA) -->
-    <section class="bento-widgets-grid" aria-label="Tarjeta Digital Laura Ramos">
-
-      <!-- ======================================================================
-           CARD 1 (TOP WIDE): LAURA RAMOS / AVERAGE GLUCOSE
-           Fondo: Dusk Peach & Mauve Glass con Insignia Circular y Bucle Dorado
-           ====================================================================== -->
-      <article class="bento-card card-top-wide" id="widget-profile" title="Abrir Perfil y Manifiesto de Laura Ramos">
-        <div class="card-top-left-content">
-          <div>
-            <div class="card-subtitle-badge" id="c1-subtitle">Average Glucose</div>
-            <h1 class="card-top-name" id="c1-title" style="display:none;">Laura Ramos</h1>
-            <p class="card-top-role" id="c1-role" style="display:none;">Dirección Editorial & Moda</p>
-          </div>
+      <!-- SECCIÓN SUPERIOR: TITULAR "NOT DEFINED" Y METADATOS TIPO MÁQUINA -->
+      <header class="poster-top-bar">
+        
+        <!-- Titular Izquierdo -->
+        <div class="title-group">
+          <h1 class="headline-not-defined">
+            not<br>
+            defined.
+          </h1>
           
-          <div class="card-value-group" style="margin-top: 14px;">
-            <span class="card-big-value" id="c1-val">84</span>
-            <span class="card-unit" id="c1-unit">mg/dl</span>
+          <!-- Trazo Manual Terracota bajo "defined." -->
+          <svg class="brush-underline-svg" viewBox="0 0 160 16" fill="none">
+            <path d="M 4,9 C 45,4 105,6 156,11 C 128,13 65,14 10,12" 
+                  stroke="#C84B31" 
+                  stroke-width="2.6" 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <!-- Metadatos Superiores Derechos: "We change..." con 3 Triángulos -->
+        <div class="top-right-meta">
+          <div class="typewriter-text">
+            <div>We change.</div>
+            <div>We hide.</div>
+            <div>We grow.</div>
+            <div>We bloom.</div>
+            <div>We are.</div>
+          </div>
+
+          <div class="triangles-stack">
+            <span>▼</span>
+            <span>▼</span>
+            <span>▼</span>
           </div>
         </div>
 
-        <!-- Insignia Circular con Círculo Punteado y Bucle Dorado -->
-        <div class="gauge-circle-container">
-          <svg class="gauge-circle-svg" viewBox="0 0 84 84">
-            <!-- Bucle orgánico dorado superior (Exacto al trazo curvado amarillo de la referencia) -->
-            <path d="M 52,14 C 69,11 75,32 58,35 C 46,37 67,20 73,30" 
-                  fill="none" 
-                  stroke="#F4CE58" 
-                  stroke-width="1.8" 
-                  stroke-linecap="round"/>
-            <!-- Círculo con borde punteado suave -->
-            <circle cx="42" cy="42" r="32" 
-                    fill="none" 
-                    stroke="rgba(255, 255, 255, 0.45)" 
-                    stroke-width="1.4" 
-                    stroke-dasharray="2.8, 2.8"/>
+      </header>
+
+      <!-- Sello Circular Giratorio: "THESE PIECES · THESE PIECES" -->
+      <div class="stamp-pieces-wrap" id="btn-open-stamp" title="Laura Ramos — Aurea Editorial">
+        <svg viewBox="0 0 100 100" class="stamp-svg">
+          <path id="stampCirclePath" d="M 50, 50 m -36, 0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0" fill="none" />
+          <text font-family="'Space Mono', monospace" font-size="8.8" font-weight="700" letter-spacing="2.6" fill="rgba(18, 18, 18, 0.72)">
+            <textPath href="#stampCirclePath" startOffset="0%">
+              THESE PIECES · THESE PIECES · THESE PIECES ·
+            </textPath>
+          </text>
+        </svg>
+      </div>
+
+      <!-- SECCIÓN MEDIA DERECHA: TEXTO MANUSCRITO TERRACota "A work in progress." -->
+      <div class="poster-middle-row">
+        <div class="script-handwritten" id="btn-open-manifesto" title="Ver Manifiesto Editorial">
+          <div class="script-text">A work in progress.</div>
+          <svg class="script-underline-svg" viewBox="0 0 135 10" fill="none">
+            <path d="M 2,6 C 42,3 90,7 133,4" stroke="#C84B31" stroke-width="2" stroke-linecap="round"/>
           </svg>
-          <!-- Número matricial 84 / Monograma LR en el centro del círculo punteado -->
-          <span class="gauge-center-text" id="c1-badge-txt">84</span>
         </div>
-      </article>
+      </div>
 
-      <!-- ======================================================================
-           CARD 2 (ROW 2, LEFT): TIME IN RANGE (SAGE GREEN AURA)
-           Slider de gradiente con flecha triangular amarilla y porcentaje 100%
-           ====================================================================== -->
-      <article class="bento-card card-sage-green" id="widget-availability" title="Disponibilidad editorial — Contactar por WhatsApp">
-        <div class="card-label" id="c2-label">Time in range</div>
-
-        <!-- Slider de gradiente con puntero triangular amarillo -->
-        <div class="slider-track-wrap">
-          <div class="slider-pointer-triangle"></div>
-          <div class="slider-gradient-line"></div>
+      <!-- SECCIÓN INFERIOR: ASTERISCO, NOT FRAGILE, HALFTONE Y SELLO 2026 -->
+      <footer class="poster-bottom-bar">
+        
+        <!-- Asterisco y Declaración -->
+        <div class="bottom-left-meta">
+          <div class="asterisk-icon">✱</div>
+          <div class="not-fragile-text">
+            NOT FRAGILE.<br>
+            JUST<br>
+            REAL.
+          </div>
         </div>
 
-        <div class="card-value-group">
-          <span class="card-big-value" id="c2-val">100</span>
-          <span class="card-unit">%</span>
-        </div>
-      </article>
-
-      <!-- ======================================================================
-           CARD 3 (ROW 2, RIGHT): VARIABILITY (MAGENTA / BERRY AURA)
-           Fila de puntos y valor 6.8% — Abre Portadas AUREA
-           ====================================================================== -->
-      <article class="bento-card card-magenta-berry" id="widget-covers" title="Ver Portadas Seleccionadas AUREA">
-        <div class="card-label" id="c3-label">Viriability</div>
-
-        <!-- Fila de puntos con punto activo brillante -->
-        <div class="dots-track-wrap">
-          <span class="track-dot"></span>
-          <span class="track-dot"></span>
-          <span class="track-dot"></span>
-          <span class="track-dot"></span>
-          <span class="track-dot"></span>
-          <span class="track-dot active"></span>
-          <span class="track-dot"></span>
-          <span class="track-dot"></span>
-          <span class="track-dot"></span>
-          <span class="track-dot"></span>
+        <!-- Halftone Dot Pattern Central -->
+        <div class="bottom-center-halftone">
+          <svg width="42" height="34" viewBox="0 0 42 34">
+            <defs>
+              <pattern id="halftonePattern" x="0" y="0" width="3.5" height="3.5" patternUnits="userSpaceOnUse">
+                <circle cx="1.75" cy="1.75" r="1.15" fill="#141414" />
+              </pattern>
+            </defs>
+            <rect width="42" height="34" fill="url(#halftonePattern)" opacity="0.85" />
+          </svg>
         </div>
 
-        <div class="card-value-group">
-          <span class="card-big-value" id="c3-val">6.8</span>
-          <span class="card-unit">%</span>
+        <!-- Sello de Año Enmarcado [ 20 | 26 ] -->
+        <div class="bottom-right-box-stamp" id="btn-open-profile" title="Laura Ramos — Aurea 2026">
+          <div class="box-year-top">20</div>
+          <div class="box-divider-line"></div>
+          <div class="box-year-bot">26</div>
         </div>
-      </article>
 
-      <!-- ======================================================================
-           CARD 4 (ROW 3, LEFT): VITAMIN D (ELECTRIC COBALT BLUE AURA)
-           Valor 83 y estado 'Good' — Abre Prensa y Testimonios
-           ====================================================================== -->
-      <article class="bento-card card-cobalt-blue" id="widget-press" title="Ver Prensa y Reseñas de la Industria">
-        <div class="card-label" id="c4-label">Vitamin D</div>
+      </footer>
 
-        <div style="height: 14px;"></div>
+    </article>
 
-        <div class="card-value-group">
-          <span class="card-big-value" id="c4-val">83</span>
-          <span class="card-status-badge" id="c4-badge">Good</span>
-        </div>
-      </article>
-
-      <!-- ======================================================================
-           CARD 5 (ROW 3, RIGHT): SPIKES (TERRACOTTA CON ORBE AZUL RADIANTE)
-           Valor 0% — Abre Descarga Inmediata de Contacto y Teléfono
-           ====================================================================== -->
-      <article class="bento-card card-terracotta-blue" id="widget-contact" title="Guardar Contacto en 1 Clic (vCard)">
-        <div class="card-label" id="c5-label">Spikes</div>
-
-        <div style="height: 14px;"></div>
-
-        <div class="card-value-group">
-          <span class="card-big-value" id="c5-val">0</span>
-          <span class="card-unit">%</span>
-        </div>
-      </article>
-
-    </section>
-
-    <!-- BOTONES FLOTANTES INFERIORES A LA DERECHA (STACK VERTICAL DE 2 BOTONES) -->
-    <aside class="bottom-right-controls">
-      <!-- Botón 1: Expandir / Ver Portafolio Completo -->
-      <button class="floating-circle-btn" id="btn-expand-sheet" title="Expandir Portafolio y Servicios" aria-label="Expandir portafolio">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-          <polyline points="15 3 21 3 21 9"></polyline>
-          <polyline points="9 21 3 21 3 15"></polyline>
-          <line x1="21" y1="3" x2="14" y2="10"></line>
-          <line x1="3" y1="21" x2="10" y2="14"></line>
+    <!-- BARRA DOCK DE ACCIONES RÁPIDAS PARA LA TARJETA DIGITAL -->
+    <nav class="editorial-action-dock" aria-label="Acciones de Contacto">
+      <button class="dock-pill-btn btn-vcard-accent" id="btn-vcard-main" title="Guardar Contacto en tu Teléfono">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+          <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+          <polyline points="17 21 17 13 7 13 7 21"></polyline>
         </svg>
+        <span>Guardar vCard</span>
       </button>
 
-      <!-- Botón 2: Compartir / Código QR / Guardar vCard -->
-      <button class="floating-circle-btn" id="btn-share-sheet" title="Escanear QR y Compartir Contacto" aria-label="Compartir contacto">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-          <circle cx="18" cy="5" r="3"></circle>
-          <circle cx="6" cy="12" r="3"></circle>
-          <circle cx="18" cy="19" r="3"></circle>
-          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-          <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-        </svg>
-      </button>
-    </aside>
+      <a href="https://wa.me/34600000000?text=Hola%20Laura,%20te%20contacto%20desde%20tu%20tarjeta%20digital." 
+         target="_blank" rel="noopener noreferrer" class="dock-pill-btn" title="Chat de WhatsApp">
+        <span>WhatsApp</span>
+      </a>
 
-  </main>
+      <button class="dock-pill-btn" id="btn-qr-main" title="Escanear Código QR">
+        <span>Código QR</span>
+      </button>
+    </nav>
+
+    <!-- FILA SECUNDARIA: PORTADAS, MANIFIESTO Y REDES -->
+    <div class="dock-secondary-row">
+      <span class="dock-sub-link" id="link-covers">
+        <span>PORTADAS AUREA</span>
+        <span>→</span>
+      </span>
+
+      <span class="dock-sub-link" id="link-contact-all">
+        <span>DATOS & EMAIL</span>
+        <span>→</span>
+      </span>
+
+      <span class="dock-sub-link" onclick="shareProfile()">
+        <span>COMPARTIR</span>
+        <span>↗</span>
+      </span>
+    </div>
+
+  </div>
 
   <!-- ==========================================================================
-       HOJAS MODALES FLOTANTES (BOTTOM SHEETS)
+       MODAL 1: PERFIL, MANIFIESTO Y BIOGRAFÍA EDITORIAL
        ========================================================================== -->
-
-  <!-- MODAL 1: PERFIL, MANIFIESTO Y BIOGRAFÍA (WIDGET 1 O BOTÓN SUPERIOR) -->
-  <div class="modal-overlay" id="modal-profile">
-    <div class="modal-sheet">
-      <div class="modal-handle-bar" onclick="closeAllModals()"></div>
-      <div class="modal-header-row">
-        <h2 class="modal-title">Laura Ramos</h2>
-        <button class="modal-close-btn" onclick="closeAllModals()">&times;</button>
+  <div class="modal-backdrop" id="modal-bio">
+    <div class="modal-paper-sheet">
+      <div class="sheet-handle" onclick="closeModals()"></div>
+      <div class="sheet-header-row">
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--terracotta); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">
+            / EDITORA JEFE AUREA
+          </div>
+          <h2 class="sheet-title">Laura Ramos</h2>
+        </div>
+        <button class="sheet-close-btn" onclick="closeModals()">&times;</button>
       </div>
 
-      <div class="avatar-preview-wrap">
-        <img src="foto.jpg" alt="Laura Ramos">
-      </div>
-
-      <p style="text-align: center; font-size: 0.88rem; color: rgba(255,255,255,0.7); margin-bottom: 4px;">
-        EDITORA JEFE DE AUREA · MADRID & PARÍS
-      </p>
-      <p style="text-align: center; font-style: italic; font-size: 0.95rem; color: #FFFFFF; margin-bottom: 20px;">
+      <p style="font-family: var(--font-mono); font-size: 0.8rem; line-height: 1.5; color: var(--ink-soft); margin-bottom: 16px;">
         «Cada portada, una declaración de estilo.»
       </p>
 
-      <div class="quote-box-aura" style="margin-bottom: 18px;">
-        <div class="quote-text-aura">
-          "El buen diseño no es decoración. Es dirección. Creo en la claridad sobre el artificio, la emoción estética por encima de la tendencia efímera y la creación de marcas editoriales con vocación de permanencia."
-        </div>
-        <div class="quote-author-aura">— Manifiesto Editorial · Laura Ramos</div>
-      </div>
-
-      <div class="action-button-list">
-        <button class="glass-action-btn btn-highlight" onclick="downloadVCard()">
-          <span class="btn-icon-label">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
-              <polyline points="17 21 17 13 7 13 7 21"></polyline>
-            </svg>
-            <span>Guardar Contacto (vCard)</span>
-          </span>
-          <span>↓</span>
-        </button>
-
-        <a href="https://wa.me/34600000000?text=Hola%20Laura,%20te%20contacto%20desde%20tu%20tarjeta%20digital." 
-           target="_blank" rel="noopener noreferrer" class="glass-action-btn">
-          <span class="btn-icon-label">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-            </svg>
-            <span>WhatsApp Directo</span>
-          </span>
-          <span>→</span>
-        </a>
-
-        <a href="https://www.aurearev.com" target="_blank" rel="noopener" class="glass-action-btn">
-          <span class="btn-icon-label">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="2" y1="12" x2="22" y2="12"></line>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-            </svg>
-            <span>Revista AUREA</span>
-          </span>
-          <span>↗</span>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODAL 2: PORTADAS AUREA (SELECTED WORKS - WIDGET 3) -->
-  <div class="modal-overlay" id="modal-covers">
-    <div class="modal-sheet">
-      <div class="modal-handle-bar" onclick="closeAllModals()"></div>
-      <div class="modal-header-row">
-        <div>
-          <h2 class="modal-title">Ediciones AUREA</h2>
-          <p style="font-size: 0.78rem; color: rgba(255,255,255,0.65);">Dirección editorial y alta costura</p>
-        </div>
-        <button class="modal-close-btn" onclick="closeAllModals()">&times;</button>
-      </div>
-
-      <div class="covers-grid-sheet">
-        <!-- Portada 1: RITUÁL -->
-        <div class="cover-card-mini" onclick="viewCoverDetail('RITUÁL', 'Alta Costura Escultural', 'cover_ritual.jpg', '2026')">
-          <div class="cover-img-box">
-            <img src="cover_ritual.jpg" alt="RITUÁL">
-          </div>
-          <div class="cover-meta-caption">
-            <div class="cover-name-txt">RITUÁL</div>
-            <div class="cover-edition-txt">Alta Costura · 2026</div>
-          </div>
-        </div>
-
-        <!-- Portada 2: AUREA -->
-        <div class="cover-card-mini" onclick="viewCoverDetail('AUREA', 'The Architecture of Style', 'cover_aurea.jpg', '2025')">
-          <div class="cover-img-box">
-            <img src="cover_aurea.jpg" alt="AUREA">
-          </div>
-          <div class="cover-meta-caption">
-            <div class="cover-name-txt">AUREA</div>
-            <div class="cover-edition-txt">Arquitectura · 2025</div>
-          </div>
-        </div>
-
-        <!-- Portada 3: NÉCTAR -->
-        <div class="cover-card-mini" onclick="viewCoverDetail('NÉCTAR', 'Botanical Couture & Essence', 'cover_nectar.jpg', '2026')">
-          <div class="cover-img-box">
-            <img src="cover_nectar.jpg" alt="NÉCTAR">
-          </div>
-          <div class="cover-meta-caption">
-            <div class="cover-name-txt">NÉCTAR</div>
-            <div class="cover-edition-txt">Special Issue · 2026</div>
-          </div>
-        </div>
-
-        <!-- Portada 4: SABLE -->
-        <div class="cover-card-mini" onclick="viewCoverDetail('SABLE', 'Noir Editorial & Minimalist Fashion', 'cover_sable.jpg', '2025')">
-          <div class="cover-img-box">
-            <img src="cover_sable.jpg" alt="SABLE">
-          </div>
-          <div class="cover-meta-caption">
-            <div class="cover-name-txt">SABLE</div>
-            <div class="cover-edition-txt">Campaña Noir · 2025</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODAL 3: PRENSA Y TESTIMONIOS (WIDGET 4) -->
-  <div class="modal-overlay" id="modal-press">
-    <div class="modal-sheet">
-      <div class="modal-handle-bar" onclick="closeAllModals()"></div>
-      <div class="modal-header-row">
-        <div>
-          <h2 class="modal-title">Prensa & Reconocimiento</h2>
-          <p style="font-size: 0.78rem; color: rgba(255,255,255,0.65);">Crítica editorial y testimonios de la industria</p>
-        </div>
-        <button class="modal-close-btn" onclick="closeAllModals()">&times;</button>
-      </div>
-
-      <div class="quote-box-aura">
-        <p class="quote-text-aura">
-          "Laura posee una rara capacidad para transformar conceptos complejos en relatos visuales que conectan profundamente con las audiencias globales."
+      <div style="background: #FFFFFF; border: 1.5px solid var(--ink-black); border-radius: 16px; padding: 18px; margin-bottom: 20px;">
+        <p style="font-family: var(--font-sans); font-size: 0.92rem; line-height: 1.5; color: var(--ink-black); margin-bottom: 12px;">
+          <strong>"El buen diseño no es decoración. Es dirección."</strong>
         </p>
-        <div class="quote-author-aura">— It's Nice That · Crítica Editorial</div>
-      </div>
-
-      <div class="quote-box-aura">
-        <p class="quote-text-aura">
-          "Laura es una mente creativa brillante y una aliada estratégica vital. Su trabajo eleva cada publicación a una categoría superior de lujo."
+        <p style="font-family: var(--font-sans); font-size: 0.86rem; line-height: 1.5; color: var(--ink-muted);">
+          Creo en la claridad sobre el artificio, la emoción estética por encima de la tendencia efímera y la creación de marcas editoriales con vocación de permanencia en la alta costura y la cultura visual contemporánea.
         </p>
-        <div class="quote-author-aura">— Alexandra Bond · CEO, Aurea Media</div>
       </div>
 
-      <div class="quote-box-aura">
-        <p class="quote-text-aura">
-          "La forma en que Laura fusiona el rigor estratégico de marca con la belleza pura de la alta costura hace que sus ediciones sean memorables."
-        </p>
-        <div class="quote-author-aura">— Marta Silva · Dir. Marketing, Rituál</div>
-      </div>
+      <button class="contact-item-btn accent-btn" onclick="downloadVCard()">
+        <span>💾 GUARDAR CONTACTO EN AGENDAS (VCARD)</span>
+        <span>→</span>
+      </button>
 
-      <div style="display: flex; justify-content: space-around; padding: 16px 0; opacity: 0.8; font-weight: 700; letter-spacing: 0.12em; font-size: 0.8rem;">
-        <span>VOGUE</span>
-        <span>Wallpaper*</span>
-        <span>FRAME</span>
-        <span>MONOCLE</span>
-      </div>
-    </div>
-  </div>
+      <a href="https://wa.me/34600000000?text=Hola%20Laura,%20te%20contacto%20desde%20tu%20tarjeta%20digital." 
+         target="_blank" rel="noopener noreferrer" class="contact-item-btn">
+        <span>💬 WHATSAPP DIRECTO (+34 600 000 000)</span>
+        <span>→</span>
+      </a>
 
-  <!-- MODAL 4: CONTACTO Y GUARDAR VCARD (WIDGET 5 O WIDGET 2) -->
-  <div class="modal-overlay" id="modal-contact">
-    <div class="modal-sheet">
-      <div class="modal-handle-bar" onclick="closeAllModals()"></div>
-      <div class="modal-header-row">
-        <div>
-          <h2 class="modal-title">Contacto Directo</h2>
-          <p style="font-size: 0.78rem; color: rgba(255,255,255,0.65);">Laura Ramos — Editora Jefe</p>
-        </div>
-        <button class="modal-close-btn" onclick="closeAllModals()">&times;</button>
-      </div>
-
-      <div class="action-button-list">
-        <button class="glass-action-btn btn-highlight" onclick="downloadVCard()">
-          <span class="btn-icon-label">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
-              <polyline points="17 21 17 13 7 13 7 21"></polyline>
-              <polyline points="7 3 7 8 15 8"></polyline>
-            </svg>
-            <span>Guardar en Agenda (vCard)</span>
-          </span>
-          <span>1-Click</span>
-        </button>
-
-        <a href="https://wa.me/34600000000?text=Hola%20Laura,%20te%20contacto%20desde%20tu%20tarjeta%20digital." 
-           target="_blank" rel="noopener noreferrer" class="glass-action-btn">
-          <span class="btn-icon-label">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-            </svg>
-            <span>WhatsApp (+34 600 000 000)</span>
-          </span>
-          <span>Chatear</span>
-        </a>
-
-        <a href="tel:+34600000000" class="glass-action-btn">
-          <span class="btn-icon-label">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-            </svg>
-            <span>Llamar por teléfono</span>
-          </span>
-          <span>Llamar</span>
-        </a>
-
-        <a href="mailto:lauraramos@aurearev.com" class="glass-action-btn">
-          <span class="btn-icon-label">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-              <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
-            <span>lauraramos@aurearev.com</span>
-          </span>
-          <span>Email</span>
-        </a>
-
-        <a href="https://instagram.com/laura_revaurea" target="_blank" rel="noopener" class="glass-action-btn">
-          <span class="btn-icon-label">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-            </svg>
-            <span>Instagram (@laura_revaurea)</span>
-          </span>
-          <span>↗</span>
-        </a>
-
-        <a href="https://www.linkedin.com/in/laurarevaurea" target="_blank" rel="noopener" class="glass-action-btn">
-          <span class="btn-icon-label">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-              <rect x="2" y="9" width="4" height="12"></rect>
-              <circle cx="4" cy="4" r="2"></circle>
-            </svg>
-            <span>LinkedIn Oficial</span>
-          </span>
-          <span>↗</span>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODAL 5: CÓDIGO QR Y COMPARTIR (BOTÓN INFERIOR DERECHO 2) -->
-  <div class="modal-overlay" id="modal-share">
-    <div class="modal-sheet" style="text-align: center;">
-      <div class="modal-handle-bar" onclick="closeAllModals()"></div>
-      <div class="modal-header-row" style="text-align: left;">
-        <div>
-          <h2 class="modal-title">Compartir Tarjeta</h2>
-          <p style="font-size: 0.78rem; color: rgba(255,255,255,0.65);">Escanear con cámara o enviar enlace</p>
-        </div>
-        <button class="modal-close-btn" onclick="closeAllModals()">&times;</button>
-      </div>
-
-      <!-- Marco del Código QR -->
-      <div class="qr-container-box" id="qr-target">
-        <img id="qr-code-img" src="" alt="Código QR Laura Ramos">
-      </div>
-
-      <p style="font-size: 0.8rem; color: rgba(255,255,255,0.7); margin-bottom: 20px;">
-        Apunta con la cámara de tu smartphone para abrir esta tarjeta digital al instante.
-      </p>
-
-      <div class="action-button-list">
-        <button class="glass-action-btn btn-highlight" onclick="shareProfile()">
-          <span class="btn-icon-label">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <circle cx="18" cy="5" r="3"></circle>
-              <circle cx="6" cy="12" r="3"></circle>
-              <circle cx="18" cy="19" r="3"></circle>
-              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-            </svg>
-            <span>Compartir Perfil</span>
-          </span>
-          <span>↗</span>
-        </button>
-
-        <button class="glass-action-btn" onclick="copyCardLink()">
-          <span class="btn-icon-label">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-            </svg>
-            <span>Copiar Enlace de la Tarjeta</span>
-          </span>
-          <span>Copiar</span>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODAL 6: SERVICIOS Y FORMULARIO EDITORIAL (BOTÓN EXPANDIR INFERIOR 1) -->
-  <div class="modal-overlay" id="modal-services">
-    <div class="modal-sheet">
-      <div class="modal-handle-bar" onclick="closeAllModals()"></div>
-      <div class="modal-header-row">
-        <div>
-          <h2 class="modal-title">Servicios Editoriales</h2>
-          <p style="font-size: 0.78rem; color: rgba(255,255,255,0.65);">Consultoría y dirección para marcas globales</p>
-        </div>
-        <button class="modal-close-btn" onclick="closeAllModals()">&times;</button>
-      </div>
-
-      <div class="service-pill-item">
-        <div class="service-pill-title">
-          <span>01. Dirección Editorial</span>
-          <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--yellow-accent);">98%</span>
-        </div>
-        <p class="service-pill-desc">Posicionamiento conceptual, manifiesto de marca, curaduría de contenidos y tono editorial.</p>
-      </div>
-
-      <div class="service-pill-item">
-        <div class="service-pill-title">
-          <span>02. Identidad Visual & Alta Costura</span>
-          <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--yellow-accent);">95%</span>
-        </div>
-        <p class="service-pill-desc">Sistemas tipográficos de alta costura, paletas cromáticas, dirección de arte e identidad de publicaciones.</p>
-      </div>
-
-      <div class="service-pill-item">
-        <div class="service-pill-title">
-          <span>03. Creative Direction</span>
-          <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--yellow-accent);">96%</span>
-        </div>
-        <p class="service-pill-desc">Campañas de moda, estilismo conceptual, narrativa de portadas y coordinación de shootings de lujo.</p>
-      </div>
-
-      <div class="service-pill-item">
-        <div class="service-pill-title">
-          <span>04. Experiencia Digital</span>
-          <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--yellow-accent);">90%</span>
-        </div>
-        <p class="service-pill-desc">Revistas interactivas, plataformas digitales inmersivas y diseño UX/UI editorial.</p>
-      </div>
-
-      <div style="margin-top: 20px;">
-        <h3 style="font-size: 1.05rem; margin-bottom: 12px;">Solicitar Colaboración</h3>
-        <form id="quick-contact-form">
-          <input type="text" id="form-name" class="form-input-aura" placeholder="Tu Nombre completo" required>
-          <input type="email" id="form-email" class="form-input-aura" placeholder="Tu Correo electrónico" required>
-          <textarea id="form-message" class="form-input-aura" rows="3" placeholder="Detalles del proyecto o colaboración..." required></textarea>
-          <button type="submit" class="glass-action-btn btn-highlight" style="justify-content: center;">
-            <span>Enviar Propuesta Editorial →</span>
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODAL 7: DETALLE DE PORTADA EN ALTA RESOLUCIÓN -->
-  <div class="modal-overlay" id="modal-cover-detail">
-    <div class="modal-sheet" style="text-align: center;">
-      <div class="modal-handle-bar" onclick="closeAllModals()"></div>
-      <div class="modal-header-row" style="text-align: left;">
-        <div>
-          <h2 class="modal-title" id="cover-detail-title">RITUÁL</h2>
-          <p id="cover-detail-subtitle" style="font-size: 0.8rem; color: rgba(255,255,255,0.7);"></p>
-        </div>
-        <button class="modal-close-btn" onclick="closeAllModals()">&times;</button>
-      </div>
-
-      <div style="width: 100%; max-width: 320px; aspect-ratio: 3/4; margin: 12px auto 18px; border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 16px 40px rgba(0,0,0,0.5);">
-        <img id="cover-detail-img" src="" alt="Portada" style="width: 100%; height: 100%; object-fit: cover;">
-      </div>
-
-      <a href="https://www.aurearev.com" target="_blank" rel="noopener" class="glass-action-btn btn-highlight" style="justify-content: center;">
-        <span>Ver Edición Completa en AUREA ↗</span>
+      <a href="tel:+34600000000" class="contact-item-btn">
+        <span>📞 LLAMAR POR TELÉFONO</span>
+        <span>→</span>
       </a>
     </div>
   </div>
 
-  <!-- TOAST DE FEEDBACK -->
-  <div class="feedback-toast" id="app-toast" role="alert">
+  <!-- ==========================================================================
+       MODAL 2: PORTADAS AUREA (SELECTED WORK)
+       ========================================================================== -->
+  <div class="modal-backdrop" id="modal-covers">
+    <div class="modal-paper-sheet">
+      <div class="sheet-handle" onclick="closeModals()"></div>
+      <div class="sheet-header-row">
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--terracotta); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">
+            / EDICIONES SELECCIONADAS
+          </div>
+          <h2 class="sheet-title">Portadas AUREA</h2>
+        </div>
+        <button class="sheet-close-btn" onclick="closeModals()">&times;</button>
+      </div>
+
+      <div class="covers-sheet-grid">
+        <!-- Portada 1 -->
+        <div class="cover-card-editorial" onclick="showCoverDetail('RITUÁL', 'Alta Costura Escultural', 'cover_ritual.jpg', '2026')">
+          <div class="cover-image-holder">
+            <img src="cover_ritual.jpg" alt="RITUÁL">
+          </div>
+          <div class="cover-card-footer">
+            <span>RITUÁL</span>
+            <span>'26</span>
+          </div>
+        </div>
+
+        <!-- Portada 2 -->
+        <div class="cover-card-editorial" onclick="showCoverDetail('AUREA', 'The Architecture of Style', 'cover_aurea.jpg', '2025')">
+          <div class="cover-image-holder">
+            <img src="cover_aurea.jpg" alt="AUREA">
+          </div>
+          <div class="cover-card-footer">
+            <span>AUREA</span>
+            <span>'25</span>
+          </div>
+        </div>
+
+        <!-- Portada 3 -->
+        <div class="cover-card-editorial" onclick="showCoverDetail('NÉCTAR', 'Botanical Couture & Essence', 'cover_nectar.jpg', '2026')">
+          <div class="cover-image-holder">
+            <img src="cover_nectar.jpg" alt="NÉCTAR">
+          </div>
+          <div class="cover-card-footer">
+            <span>NÉCTAR</span>
+            <span>'26</span>
+          </div>
+        </div>
+
+        <!-- Portada 4 -->
+        <div class="cover-card-editorial" onclick="showCoverDetail('SABLE', 'Noir Editorial & Minimalist Fashion', 'cover_sable.jpg', '2025')">
+          <div class="cover-image-holder">
+            <img src="cover_sable.jpg" alt="SABLE">
+          </div>
+          <div class="cover-card-footer">
+            <span>SABLE</span>
+            <span>'25</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="https://www.aurearev.com" target="_blank" rel="noopener" class="contact-item-btn accent-btn" style="justify-content:center;">
+        <span>VISITAR REVISTA AUREA OFICIAL ↗</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 3: CÓDIGO QR Y COMPARTIR
+       ========================================================================== -->
+  <div class="modal-backdrop" id="modal-qr">
+    <div class="modal-paper-sheet" style="text-align: center;">
+      <div class="sheet-handle" onclick="closeModals()"></div>
+      <div class="sheet-header-row" style="text-align: left;">
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--terracotta); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">
+            / CÓDIGO QR OFICIAL
+          </div>
+          <h2 class="sheet-title">Escanear Tarjeta</h2>
+        </div>
+        <button class="sheet-close-btn" onclick="closeModals()">&times;</button>
+      </div>
+
+      <div class="qr-frame-box">
+        <img id="qr-img" src="" alt="Código QR Laura Ramos">
+      </div>
+
+      <p style="font-family: var(--font-mono); font-size: 0.76rem; color: var(--ink-soft); margin-bottom: 20px;">
+        Apunta con la cámara de tu smartphone para abrir esta tarjeta digital al instante.
+      </p>
+
+      <button class="contact-item-btn accent-btn" onclick="copyProfileLink()">
+        <span>📋 COPIAR ENLACE DE LA TARJETA</span>
+        <span>→</span>
+      </button>
+
+      <button class="contact-item-btn" onclick="shareProfile()">
+        <span>↗ COMPARTIR EN REDES / MENSAJE</span>
+        <span>→</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 4: DETALLE DE CONTACTO DIRECTO Y REDES
+       ========================================================================== -->
+  <div class="modal-backdrop" id="modal-contact">
+    <div class="modal-paper-sheet">
+      <div class="sheet-handle" onclick="closeModals()"></div>
+      <div class="sheet-header-row">
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--terracotta); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">
+            / CONTACTO DIRECTO
+          </div>
+          <h2 class="sheet-title">Laura Ramos</h2>
+        </div>
+        <button class="sheet-close-btn" onclick="closeModals()">&times;</button>
+      </div>
+
+      <button class="contact-item-btn accent-btn" onclick="downloadVCard()">
+        <span>💾 GUARDAR EN AGENDAS (VCARD)</span>
+        <span>1-CLIC</span>
+      </button>
+
+      <a href="https://wa.me/34600000000?text=Hola%20Laura,%20te%20contacto%20desde%20tu%20tarjeta%20digital." 
+         target="_blank" rel="noopener noreferrer" class="contact-item-btn">
+        <span>💬 WHATSAPP DIRECTO</span>
+        <span>+34 600...</span>
+      </a>
+
+      <a href="tel:+34600000000" class="contact-item-btn">
+        <span>📞 LLAMADA TELEFÓNICA</span>
+        <span>DIRECTO</span>
+      </a>
+
+      <a href="mailto:lauraramos@aurearev.com" class="contact-item-btn">
+        <span>✉️ lauraramos@aurearev.com</span>
+        <span>EMAIL</span>
+      </a>
+
+      <a href="https://instagram.com/laura_revaurea" target="_blank" rel="noopener" class="contact-item-btn">
+        <span>📸 INSTAGRAM (@laura_revaurea)</span>
+        <span>↗</span>
+      </a>
+
+      <a href="https://www.linkedin.com/in/laurarevaurea" target="_blank" rel="noopener" class="contact-item-btn">
+        <span>💼 LINKEDIN OFICIAL</span>
+        <span>↗</span>
+      </a>
+
+      <a href="https://www.aurearev.com" target="_blank" rel="noopener" class="contact-item-btn">
+        <span>🌐 WWW.AUREAREV.COM</span>
+        <span>↗</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 5: DETALLE DE PORTADA EN ALTA RESOLUCIÓN
+       ========================================================================== -->
+  <div class="modal-backdrop" id="modal-cover-zoom">
+    <div class="modal-paper-sheet" style="text-align: center;">
+      <div class="sheet-handle" onclick="closeModals()"></div>
+      <div class="sheet-header-row" style="text-align: left;">
+        <div>
+          <div id="zoom-cover-subtitle" style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--terracotta); font-weight: 700; text-transform: uppercase;"></div>
+          <h2 class="sheet-title" id="zoom-cover-title">RITUÁL</h2>
+        </div>
+        <button class="sheet-close-btn" onclick="closeModals()">&times;</button>
+      </div>
+
+      <div style="width: 100%; max-width: 320px; aspect-ratio: 3/4; margin: 12px auto 18px; border: 1.5px solid var(--ink-black); border-radius: 18px; overflow: hidden; box-shadow: 0 12px 32px rgba(0,0,0,0.25);">
+        <img id="zoom-cover-img" src="" alt="Portada" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+
+      <a href="https://www.aurearev.com" target="_blank" rel="noopener" class="contact-item-btn accent-btn" style="justify-content:center;">
+        <span>VER EDICIÓN COMPLETA EN AUREA ↗</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- TOAST FEEDBACK NOTIFICACIÓN -->
+  <div class="editorial-toast" id="toast-msg">
     <span id="toast-txt">✓ Contacto guardado con éxito</span>
   </div>
 
   <!-- ==========================================================================
-       LÓGICA JAVASCRIPT: VCARD, QR, MODALES Y ACCIONES
+       SCRIPTS: LÓGICA DE VCARD, QR, MODALES Y ACCIONES
        ========================================================================== -->
   <script>
-    // DATOS OFICIALES DE LAURA RAMOS (AUREA)
-    const LAURA_DATA = {
+    // DATOS DE CONTACTO OFICIALES DE LAURA RAMOS
+    const CONTACT_DATA = {
       fullName: "Laura Ramos",
       firstName: "Laura",
       lastName: "Ramos",
@@ -1414,27 +1079,26 @@
       instagram: "https://instagram.com/laura_revaurea",
       linkedin: "https://www.linkedin.com/in/laurarevaurea",
       address: "Madrid — París",
-      note: "Cada portada, una declaración de estilo. Dirección editorial, estrategia de marca y alta costura."
+      note: "not defined. A work in progress. Cada portada, una declaración de estilo."
     };
 
-    // GENERAR CÓDIGO QR OFICIAL
-    function initQRCode() {
-      const currentUrl = encodeURIComponent(window.location.href);
-      const qrImg = document.getElementById('qr-code-img');
-      qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=180x180&margin=2&data=${currentUrl}`;
+    // GENERAR QR CODE OFICIAL
+    function initQR() {
+      const url = encodeURIComponent(window.location.href);
+      const img = document.getElementById('qr-img');
+      img.src = `https://api.qrserver.com/v1/create-qr-code/?size=180x180&margin=2&data=${url}`;
     }
-    initQRCode();
+    initQR();
 
     // TOAST NOTIFICACIÓN
-    function notify(message) {
-      const toast = document.getElementById('app-toast');
-      const txt = document.getElementById('toast-txt');
-      txt.textContent = message;
+    function notify(text) {
+      const toast = document.getElementById('toast-msg');
+      const label = document.getElementById('toast-txt');
+      label.textContent = text;
       toast.classList.add('show');
       
-      // Haptic feedback si el dispositivo lo soporta
       if (navigator.vibrate) {
-        try { navigator.vibrate(20); } catch(e) {}
+        try { navigator.vibrate(18); } catch(e) {}
       }
 
       setTimeout(() => {
@@ -1444,7 +1108,7 @@
 
     // GESTIÓN DE MODALES
     function openModal(id) {
-      closeAllModals();
+      closeModals();
       const modal = document.getElementById(id);
       if (modal) {
         modal.classList.add('active');
@@ -1452,23 +1116,19 @@
       }
     }
 
-    function closeAllModals() {
-      document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('active'));
+    function closeModals() {
+      document.querySelectorAll('.modal-backdrop').forEach(m => m.classList.remove('active'));
       document.body.style.overflow = '';
     }
 
-    // CERRAR AL HACER CLIC FUERA DEL CONTENIDO
-    document.querySelectorAll('.modal-overlay').forEach(overlay => {
-      overlay.addEventListener('click', (e) => {
-        if (e.target === overlay) {
-          closeAllModals();
-        }
+    document.querySelectorAll('.modal-backdrop').forEach(backdrop => {
+      backdrop.addEventListener('click', (e) => {
+        if (e.target === backdrop) closeModals();
       });
     });
 
-    // TECLA ESCAPE PARA CERRAR
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeAllModals();
+      if (e.key === 'Escape') closeModals();
     });
 
     // DESCARGAR VCARD (.VCF) EN 1 CLIC
@@ -1476,17 +1136,17 @@
       const vcard = [
         'BEGIN:VCARD',
         'VERSION:3.0',
-        `N:${LAURA_DATA.lastName};${LAURA_DATA.firstName};;;`,
-        `FN:${LAURA_DATA.fullName}`,
-        `ORG:${LAURA_DATA.organization}`,
-        `TITLE:${LAURA_DATA.title}`,
-        `TEL;TYPE=CELL,VOICE:${LAURA_DATA.phone}`,
-        `EMAIL;TYPE=PREF,INTERNET:${LAURA_DATA.email}`,
-        `URL;TYPE=WORK:${LAURA_DATA.website}`,
-        `X-SOCIALPROFILE;type=instagram:${LAURA_DATA.instagram}`,
-        `X-SOCIALPROFILE;type=linkedin:${LAURA_DATA.linkedin}`,
+        `N:${CONTACT_DATA.lastName};${CONTACT_DATA.firstName};;;`,
+        `FN:${CONTACT_DATA.fullName}`,
+        `ORG:${CONTACT_DATA.organization}`,
+        `TITLE:${CONTACT_DATA.title}`,
+        `TEL;TYPE=CELL,VOICE:${CONTACT_DATA.phone}`,
+        `EMAIL;TYPE=PREF,INTERNET:${CONTACT_DATA.email}`,
+        `URL;TYPE=WORK:${CONTACT_DATA.website}`,
+        `X-SOCIALPROFILE;type=instagram:${CONTACT_DATA.instagram}`,
+        `X-SOCIALPROFILE;type=linkedin:${CONTACT_DATA.linkedin}`,
         `ADR;TYPE=WORK:;;Madrid / París;;;;`,
-        `NOTE:${LAURA_DATA.note}`,
+        `NOTE:${CONTACT_DATA.note}`,
         'END:VCARD'
       ].join('\r\n');
 
@@ -1503,11 +1163,11 @@
       notify('✓ Contacto descargado a tu agenda');
     }
 
-    // COMPARTIR PERFIL O COPIAR ENLACE
+    // COMPARTIR
     async function shareProfile() {
       const shareData = {
-        title: `${LAURA_DATA.fullName} — ${LAURA_DATA.title}`,
-        text: `Tarjeta de presentación de Laura Ramos (${LAURA_DATA.organization}): "${LAURA_DATA.note}"`,
+        title: `${CONTACT_DATA.fullName} — not defined.`,
+        text: `Tarjeta de presentación de Laura Ramos (${CONTACT_DATA.organization}): "${CONTACT_DATA.note}"`,
         url: window.location.href
       };
 
@@ -1516,15 +1176,15 @@
           await navigator.share(shareData);
         } catch (err) {
           if (err.name !== 'AbortError') {
-            copyCardLink();
+            copyProfileLink();
           }
         }
       } else {
-        copyCardLink();
+        copyProfileLink();
       }
     }
 
-    function copyCardLink() {
+    function copyProfileLink() {
       const url = window.location.href;
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(url).then(() => {
@@ -1546,99 +1206,23 @@
     }
 
     // DETALLE DE PORTADA
-    function viewCoverDetail(title, subtitle, imgSrc, year) {
-      document.getElementById('cover-detail-title').textContent = title;
-      document.getElementById('cover-detail-subtitle').textContent = `${subtitle} · Edición ${year}`;
-      document.getElementById('cover-detail-img').src = imgSrc;
-      openModal('modal-cover-detail');
+    function showCoverDetail(title, subtitle, img, year) {
+      document.getElementById('zoom-cover-title').textContent = title;
+      document.getElementById('zoom-cover-subtitle').textContent = `/ ${subtitle} · Edición ${year}`;
+      document.getElementById('zoom-cover-img').src = img;
+      openModal('modal-cover-zoom');
     }
 
-    // ASIGNAR EVENTOS A LOS WIDGETS BENTO
-    document.getElementById('widget-profile').addEventListener('click', () => openModal('modal-profile'));
-    document.getElementById('btn-top-back').addEventListener('click', () => openModal('modal-profile'));
+    // EVENTOS DE BOTONES
+    document.getElementById('btn-vcard-main').addEventListener('click', downloadVCard);
+    document.getElementById('btn-qr-main').addEventListener('click', () => openModal('modal-qr'));
+    document.getElementById('link-covers').addEventListener('click', () => openModal('modal-covers'));
+    document.getElementById('link-contact-all').addEventListener('click', () => openModal('modal-contact'));
 
-    document.getElementById('widget-availability').addEventListener('click', () => {
-      // Abre contacto directo por WhatsApp
-      window.open('https://wa.me/34600000000?text=Hola%20Laura,%20te%20contacto%20desde%20tu%20tarjeta%20digital.', '_blank');
-    });
-
-    document.getElementById('widget-covers').addEventListener('click', () => openModal('modal-covers'));
-    document.getElementById('widget-press').addEventListener('click', () => openModal('modal-press'));
-    document.getElementById('widget-contact').addEventListener('click', downloadVCard);
-
-    // BOTONES FLOTANTES INFERIORES
-    document.getElementById('btn-expand-sheet').addEventListener('click', () => openModal('modal-services'));
-    document.getElementById('btn-share-sheet').addEventListener('click', () => openModal('modal-share'));
-
-    // TOGGLE ENTRE MODO FOTO EXACTA Y MODO EDITORIAL
-    let isEditorialMode = false;
-    const modeBtn = document.getElementById('mode-toggle-btn');
-    const modeLabel = document.getElementById('mode-label-text');
-
-    function toggleMode() {
-      isEditorialMode = !isEditorialMode;
-      if (isEditorialMode) {
-        modeLabel.textContent = "EDITORIAL LR";
-        // Textos Editoriales
-        document.getElementById('c1-subtitle').textContent = "Editora Jefe — Aurea";
-        document.getElementById('c1-val').textContent = "98";
-        document.getElementById('c1-unit').textContent = "impacto";
-        document.getElementById('c1-badge-txt').textContent = "LR";
-        
-        document.getElementById('c2-label').textContent = "Disponibilidad";
-        document.getElementById('c2-val').textContent = "100";
-
-        document.getElementById('c3-label').textContent = "Ediciones Aurea";
-        document.getElementById('c3-val').textContent = "4";
-
-        document.getElementById('c4-label').textContent = "Reconocimiento";
-        document.getElementById('c4-val').textContent = "10+";
-        document.getElementById('c4-badge').textContent = "Vogue";
-
-        document.getElementById('c5-label').textContent = "Contacto Directo";
-        document.getElementById('c5-val').textContent = "1";
-        notify("Modo: Datos Editoriales de Laura Ramos");
-      } else {
-        modeLabel.textContent = "AUREA '26";
-        // Textos Idénticos a la foto
-        document.getElementById('c1-subtitle').textContent = "Average Glucose";
-        document.getElementById('c1-val').textContent = "84";
-        document.getElementById('c1-unit').textContent = "mg/dl";
-        document.getElementById('c1-badge-txt').textContent = "84";
-
-        document.getElementById('c2-label').textContent = "Time in range";
-        document.getElementById('c2-val').textContent = "100";
-
-        document.getElementById('c3-label').textContent = "Viriability";
-        document.getElementById('c3-val').textContent = "6.8";
-
-        document.getElementById('c4-label').textContent = "Vitamin D";
-        document.getElementById('c4-val').textContent = "83";
-        document.getElementById('c4-badge').textContent = "Good";
-
-        document.getElementById('c5-label').textContent = "Spikes";
-        document.getElementById('c5-val').textContent = "0";
-        notify("Modo: Estilo visual idéntico a la referencia");
-      }
-    }
-
-    modeBtn.addEventListener('click', toggleMode);
-
-    // ENVÍO DEL FORMULARIO EDITORIAL
-    document.getElementById('quick-contact-form').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('form-name').value;
-      const email = document.getElementById('form-email').value;
-      const msg = document.getElementById('form-message').value;
-
-      const subject = encodeURIComponent(`Propuesta Editorial de ${name}`);
-      const body = encodeURIComponent(`Hola Laura,\n\nSoy ${name} (${email}).\n\nPropuesta:\n${msg}`);
-
-      notify('✓ Redactando correo para Laura...');
-      setTimeout(() => {
-        window.location.href = `mailto:${LAURA_DATA.email}?subject=${subject}&body=${body}`;
-      }, 600);
-    });
+    // EVENTOS INTERACTIVOS EN EL POSTER
+    document.getElementById('btn-open-stamp').addEventListener('click', () => openModal('modal-bio'));
+    document.getElementById('btn-open-manifesto').addEventListener('click', () => openModal('modal-bio'));
+    document.getElementById('btn-open-profile').addEventListener('click', () => openModal('modal-bio'));
   </script>
 </body>
 </html>
