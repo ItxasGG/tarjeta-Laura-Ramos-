@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LAURA RAMOS — Editora Jefe de AUREA | Dirección Editorial & Moda</title>
-  <meta name="description" content="Tarjeta y portfolio digital de Laura Ramos, Editora Jefe de AUREA. Dirección editorial, estrategia de marca y alta costura.">
+  <title>LAURA RAMOS IBÁÑEZ — Editora Jefe de la Revista Aura | Tarjeta de Contacto Digital</title>
+  <meta name="description" content="Tarjeta de contacto digital de Laura Ramos Ibáñez, Editora jefe de la revista Aura. «La moda que cuenta historias.» Dirección editorial, cultura visual y alta costura.">
   
   <!-- Open Graph / Redes Sociales -->
-  <meta property="og:title" content="LAURA RAMOS — Editora Jefe de AUREA">
-  <meta property="og:description" content="Cada portada, una declaración de estilo. Dirección editorial, estrategia de marca y cultura visual.">
+  <meta property="og:title" content="LAURA RAMOS IBÁÑEZ — Editora Jefe de la Revista Aura">
+  <meta property="og:description" content="«La moda que cuenta historias.» Tarjeta de contacto digital oficial de Laura Ramos Ibáñez, Editora jefe de la revista Aura.">
   <meta property="og:type" content="profile">
   <meta property="og:image" content="foto_laura.jpg">
 
@@ -264,8 +264,8 @@
 
     .hero-main-title {
       font-family: var(--font-display);
-      font-size: clamp(5.4rem, 13vw, 11rem);
-      line-height: 0.84;
+      font-size: clamp(4.2rem, 9.5vw, 8.6rem);
+      line-height: 0.85;
       letter-spacing: -0.01em;
       color: var(--ink-black);
       text-transform: uppercase;
@@ -276,6 +276,13 @@
 
     .hero-name-row {
       display: block;
+    }
+
+    .hero-name-row.hero-surname {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
     /* Etiqueta / Cinta adhesiva roja "EDITORA JEFE" inclinada */
@@ -306,15 +313,177 @@
       transform: rotate(4deg);
     }
 
-    .hero-manifesto-snippet {
-      margin-top: 36px;
+    /* Etiqueta distintiva de Tarjeta de Contacto Digital */
+    .hero-digital-tag {
+      display: inline-block;
+      background: var(--ink-black);
+      color: var(--editorial-white);
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      margin-bottom: 8px;
+      border-left: 3px solid var(--crimson-editorial);
+    }
+
+    /* Caja de frase destacada / lema editorial */
+    .hero-slogan-box {
+      margin-top: 24px;
+      padding: 16px 20px;
+      background: rgba(255, 255, 255, 0.48);
+      border-left: 3.5px solid var(--crimson-editorial);
+      border-top: 1px solid var(--border-hairline);
+      border-right: 1px solid var(--border-hairline);
+      border-bottom: 1px solid var(--border-hairline);
+      backdrop-filter: blur(6px);
+      max-width: 520px;
+      box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .hero-slogan-quote {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      font-style: italic;
+      font-weight: 700;
+      color: var(--ink-black);
+      line-height: 1.25;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .hero-slogan-sub {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+      line-height: 1.5;
+    }
+
+    /* Panel de Acceso Rápido vCard y Contacto Directo */
+    .hero-vcard-panel {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 520px;
+    }
+
+    .hero-card-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--crimson-editorial);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-card-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border-hairline);
+    }
+
+    .hero-vcard-primary-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .hero-btn-save-vcard {
+      background: var(--crimson-editorial);
+      color: var(--pure-white);
+      border: 1.5px solid var(--border-ink);
       font-family: var(--font-mono);
       font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 12px 20px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 3px 3px 0 var(--ink-black);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-btn-save-vcard:hover {
+      background: var(--crimson-dark);
+      transform: translate(-1px, -1px);
+      box-shadow: 4px 4px 0 var(--ink-black);
+    }
+
+    .hero-btn-whatsapp {
+      background: #0E0E0E;
+      color: var(--pure-white);
+      text-decoration: none;
+      border: 1.5px solid var(--border-ink);
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 12px 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 3px 3px 0 var(--crimson-editorial);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-btn-whatsapp:hover {
+      background: #128C7E;
+      border-color: #128C7E;
+      color: #fff;
+      transform: translate(-1px, -1px);
+      box-shadow: 4px 4px 0 var(--ink-black);
+    }
+
+    .hero-chips-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .hero-chip {
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid var(--border-ink);
+      padding: 6px 11px;
+      font-family: var(--font-mono);
+      font-size: 0.71rem;
+      font-weight: 600;
+      color: var(--ink-black);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-chip:hover {
+      background: var(--ink-black);
+      color: var(--pure-white);
+      border-color: var(--ink-black);
+      transform: translateY(-1px);
+    }
+
+    .hero-manifesto-snippet {
+      margin-top: 26px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
       line-height: 1.65;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       color: var(--ink-black);
-      max-width: 380px;
+      max-width: 440px;
     }
 
     .hero-manifesto-snippet .plus-symbol {
@@ -435,6 +604,16 @@
       font-weight: 700;
       letter-spacing: 0.1em;
       margin-top: 3px;
+    }
+
+    .kraft-sub-sub {
+      font-family: var(--font-mono);
+      font-size: 0.44rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--crimson-dark);
+      margin-top: 2px;
     }
 
     /* Cinta de tape decorativa sobre el sello kraft */
@@ -913,6 +1092,18 @@
       letter-spacing: 0.08em;
       line-height: 1;
       text-transform: uppercase;
+    }
+
+    .work-badge-latest {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--crimson-editorial);
+      color: var(--pure-white);
+      padding: 3px 8px;
+      border: 1px dashed rgba(255, 255, 255, 0.4);
     }
 
     .work-cover-image-box {
@@ -1664,8 +1855,8 @@
 
   <!-- NAVEGACIÓN SUPERIOR EDITORIAL -->
   <header class="editorial-navbar">
-    <a href="#" class="nav-brand">
-      <span>LAURA RAMOS</span>
+    <a href="#inicio" class="nav-brand">
+      <span>LAURA RAMOS IBÁÑEZ</span>
       <span class="nav-brand-dot"></span>
     </a>
 
@@ -1680,8 +1871,16 @@
     <div class="nav-right-actions">
       <div class="nav-status-badge">
         <span class="pulse-dot"></span>
-        <span>Aurea · '26</span>
+        <span>REVISTA AURA · '26</span>
       </div>
+      <button class="btn-nav-action" onclick="downloadVCard()" title="Guardar Contacto vCard">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+          <polyline points="17 21 17 13 7 13 7 21"></polyline>
+          <polyline points="7 3 7 8 15 8"></polyline>
+        </svg>
+        <span>GUARDAR</span>
+      </button>
       <button class="btn-nav-action" id="btn-nav-qr" title="Escanear Código QR">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
           <rect x="3" y="3" width="7" height="7"></rect>
@@ -1700,17 +1899,62 @@
     <!-- Columna Izquierda: Tipografía Titular y Declaración -->
     <div class="hero-typography-col">
       <div class="hero-top-meta">
-        <div>DIRECCIÓN EDITORIAL</div>
-        <div>ESTRATEGIA DE MARCA</div>
-        <div>VISUAL STORYTELLING</div>
+        <div><span class="hero-digital-tag">TARJETA DE CONTACTO DIGITAL OFICIAL</span></div>
+        <div>REVISTA AURA · EDITORA JEFE</div>
+        <div>DIRECCIÓN EDITORIAL & ESTRATEGIA DE MARCA</div>
       </div>
 
-      <div class="hero-main-title">
+      <h1 class="hero-main-title">
         <span class="hero-name-row">LAURA</span>
-        <span class="hero-name-row">
-          RAMOS
+        <span class="hero-name-row">RAMOS</span>
+        <span class="hero-name-row hero-surname">
+          IBÁÑEZ
           <span class="hero-tape-badge">EDITORA JEFE</span>
         </span>
+      </h1>
+
+      <div class="hero-slogan-box">
+        <span class="hero-slogan-quote">“La moda que cuenta historias.”</span>
+        <p class="hero-slogan-sub">Editora jefe de la revista Aura · Dirección editorial & cultura visual</p>
+      </div>
+
+      <!-- Acceso Rápido de Tarjeta Digital -->
+      <div class="hero-vcard-panel">
+        <div class="hero-card-label">CONTACTO INMEDIATO / TARJETA DIGITAL</div>
+        <div class="hero-vcard-primary-row">
+          <button class="hero-btn-save-vcard" id="hero-btn-vcard-save" onclick="downloadVCard()" title="Descargar contacto a la agenda">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+              <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+              <polyline points="17 21 17 13 7 13 7 21"></polyline>
+              <polyline points="7 3 7 8 15 8"></polyline>
+            </svg>
+            <span>GUARDAR CONTACTO</span>
+          </button>
+          <a href="https://wa.me/34600000008?text=Hola%20Laura,%20te%20contacto%20desde%20tu%20tarjeta%20digital." target="_blank" rel="noopener noreferrer" class="hero-btn-whatsapp" title="Enviar WhatsApp a Laura Ramos Ibáñez">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+            <span>WHATSAPP DIRECTO</span>
+          </a>
+        </div>
+        <div class="hero-chips-strip">
+          <a href="mailto:laura.ramos@auramagazine.es" class="hero-chip" title="Enviar email">
+            <span>✉️</span>
+            <span>laura.ramos@auramagazine.es</span>
+          </a>
+          <a href="https://auramagazine.es" target="_blank" rel="noopener" class="hero-chip" title="Visitar Revista Aura">
+            <span>🌐</span>
+            <span>auramagazine.es</span>
+          </a>
+          <a href="https://instagram.com/lauraramos.aura" target="_blank" rel="noopener" class="hero-chip" title="Instagram">
+            <span>📸</span>
+            <span>@lauraramos.aura</span>
+          </a>
+          <a href="https://www.linkedin.com/in/lauraramosibanez" target="_blank" rel="noopener" class="hero-chip" title="LinkedIn">
+            <span>💼</span>
+            <span>linkedin.com/in/lauraramosibanez</span>
+          </a>
+        </div>
       </div>
 
       <div class="hero-manifesto-snippet">
@@ -1727,25 +1971,26 @@
         
         <!-- Bloque Rojo Asimétrico Detrás de la Foto -->
         <div class="photo-backdrop-crimson">
-          <span class="photo-backdrop-text">MADRID · PARÍS — AUREA '26</span>
+          <span class="photo-backdrop-text">MADRID · PARÍS — REVISTA AURA '26</span>
         </div>
 
         <!-- Marco Principal de la Fotografía Oficial de Laura -->
         <div class="hero-photo-frame">
-          <img src="foto_laura.jpg" alt="Laura Ramos — Editora Jefe de AUREA" id="hero-avatar">
+          <img src="foto_laura.jpg" alt="Laura Ramos Ibáñez — Editora Jefe de la Revista Aura" id="hero-avatar">
         </div>
 
         <!-- Sello de Papel Kraft Inclinado con Monograma -->
-        <div class="kraft-seal-sticker" id="btn-open-seal" title="Laura Ramos Seal">
+        <div class="kraft-seal-sticker" id="btn-open-seal" title="Laura Ramos Ibáñez — Tarjeta Oficial">
           <div class="kraft-tape-strip"></div>
-          <span class="kraft-monogram">LR</span>
-          <span class="kraft-sub">AUREA · 26</span>
+          <span class="kraft-monogram">LRI</span>
+          <span class="kraft-sub">REVISTA AURA</span>
+          <span class="kraft-sub-sub">TARJETA OFICIAL</span>
         </div>
       </div>
 
       <!-- Cinta Vertical y Botón Circular Flotante a la Derecha -->
       <aside class="hero-floating-ribbon">
-        <div class="ribbon-vertical-tag">DISPONIBLE PARA PROYECTOS</div>
+        <div class="ribbon-vertical-tag">TARJETA DIGITAL · DISPONIBLE</div>
         <a href="#contacto" class="btn-circle-talk" id="btn-circle-action" title="Contactar con Laura">
           <span>LET'S</span>
           <span>TALK</span>
@@ -1786,13 +2031,13 @@
             <path id="stampCirclePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" />
             <text font-family="'Space Mono', monospace" font-size="8.8" font-weight="700" fill="#EAE3D6" letter-spacing="2">
               <textPath href="#stampCirclePath" startOffset="0%">
-                · ESTRATEGIA EDITORIAL · AUREA 2026 · MODA ·
+                · REVISTA AURA · LA MODA QUE CUENTA HISTORIAS · 2026 ·
               </textPath>
             </text>
           </svg>
-          <div class="stamp-center-icon">LR</div>
+          <div class="stamp-center-icon">LRI</div>
         </div>
-        <div class="manifesto-stamp-sub">MARCAS · CULTURA · ESTILO</div>
+        <div class="manifesto-stamp-sub">REVISTA AURA · DIRECCIÓN EDITORIAL</div>
       </div>
 
     </div>
@@ -1923,69 +2168,70 @@
     </div>
   </section>
 
-  <!-- SECCIÓN 5: SELECTED WORK / PORTADAS AUREA (/ SELECTED WORK) -->
+  <!-- SECCIÓN 5: SELECTED WORK / PORTADAS REVISTA AURA (/ SELECTED WORK) -->
   <section class="selected-work-section" id="portadas">
     <div class="section-label-bar">
-      <span class="section-mono-tag">/ EDICIONES & PORTADAS SELECCIONADAS</span>
-      <a href="https://www.aurearev.com" target="_blank" rel="noopener" class="section-mono-tag" style="text-decoration:none; color:inherit;">
-        VER TODAS LAS EDICIONES →
+      <span class="section-mono-tag">/ EDICIONES & PORTADAS — REVISTA AURA</span>
+      <a href="https://auramagazine.es" target="_blank" rel="noopener" class="section-mono-tag" style="text-decoration:none; color:inherit;">
+        VER TODAS LAS EDICIONES (AURAMAGAZINE.ES) →
       </a>
     </div>
 
     <div class="work-grid">
-      <!-- Portada 1: RITUÁL -->
-      <article class="work-card card-crimson" onclick="openCoverModal('RITUÁL', 'Alta Costura Escultural', 'cover_ritual.jpg', '2026', 'BRANDING · ALTA COSTURA')">
+      <!-- Portada 1: NOIR EDITORIAL (ÚLTIMA PORTADA DE REVISTA AURA) -->
+      <article class="work-card card-black" onclick="openCoverModal('NOIR EDITORIAL', 'Revista Aura · Issue Nº 12 — Haute Couture & Minimalist Fashion', 'cover_sable.jpg', '2026', 'REVISTA AURA · ÚLTIMA PORTADA')">
+        <div class="work-cover-header">
+          <span class="work-magazine-title">AURA</span>
+          <span class="work-badge-latest">ÚLTIMA PORTADA</span>
+        </div>
+        <div class="work-cover-image-box">
+          <img src="cover_sable.jpg" alt="Revista Aura — Portada Noir Editorial (Issue Nº 12)">
+        </div>
+        <div class="work-cover-footer">
+          <span class="work-tag-capsule">NOIR EDITORIAL</span>
+          <span class="work-year-tag">ISSUE Nº 12 · 2026</span>
+        </div>
+      </article>
+
+      <!-- Portada 2: AURA — The Architecture of Style -->
+      <article class="work-card card-white" onclick="openCoverModal('THE ARCHITECTURE OF STYLE', 'Revista Aura · The Architecture of Style', 'cover_aurea.jpg', '2025/2026', 'REVISTA AURA · EDICIÓN ANUAL')">
+        <div class="work-cover-header">
+          <span class="work-magazine-title">AURA</span>
+        </div>
+        <div class="work-cover-image-box">
+          <img src="cover_aurea.jpg" alt="Revista Aura — The Architecture of Style">
+        </div>
+        <div class="work-cover-footer">
+          <span class="work-tag-capsule">ARCH. OF STYLE</span>
+          <span class="work-year-tag">EDICIÓN ANUAL</span>
+        </div>
+      </article>
+
+      <!-- Portada 3: RITUÁL -->
+      <article class="work-card card-crimson" onclick="openCoverModal('RITUÁL', 'Alta Costura Escultural · Revista Aura', 'cover_ritual.jpg', '2026', 'REVISTA AURA · ALTA COSTURA')">
         <div class="work-cover-header">
           <span class="work-magazine-title">RITUÁL</span>
         </div>
         <div class="work-cover-image-box">
-          <img src="cover_ritual.jpg" alt="Portada Rituál — Dirección editorial Laura Ramos">
+          <img src="cover_ritual.jpg" alt="Revista Aura — Portada Rituál (Alta Costura Escultural)">
         </div>
         <div class="work-cover-footer">
-          <span class="work-tag-capsule">BRANDING</span>
+          <span class="work-tag-capsule">ALTA COSTURA</span>
           <span class="work-year-tag">2026</span>
         </div>
       </article>
 
-      <!-- Portada 2: AUREA -->
-      <article class="work-card card-white" onclick="openCoverModal('AUREA', 'The Architecture of Style', 'cover_aurea.jpg', '2025', 'EDITORIAL · ARCHITECTURE')">
-        <div class="work-cover-header">
-          <span class="work-magazine-title">AUREA</span>
-        </div>
-        <div class="work-cover-image-box">
-          <img src="cover_aurea.jpg" alt="Portada Aurea — Arquitectura del Estilo">
-        </div>
-        <div class="work-cover-footer">
-          <span class="work-tag-capsule">EDICIÓN ANUAL</span>
-          <span class="work-year-tag">2025</span>
-        </div>
-      </article>
-
-      <!-- Portada 3: NÉCTAR -->
-      <article class="work-card card-orange" onclick="openCoverModal('NÉCTAR', 'Crimson Essence & Botanical Couture', 'cover_nectar.jpg', '2026', 'COUTURE · BOTANICAL')">
+      <!-- Portada 4: NÉCTAR -->
+      <article class="work-card card-orange" onclick="openCoverModal('NÉCTAR', 'Crimson Essence & Botanical Couture · Revista Aura', 'cover_nectar.jpg', '2026', 'REVISTA AURA · BOTANICAL')">
         <div class="work-cover-header">
           <span class="work-magazine-title">NÉCTAR</span>
         </div>
         <div class="work-cover-image-box">
-          <img src="cover_nectar.jpg" alt="Portada Néctar — Dirección editorial Laura Ramos">
+          <img src="cover_nectar.jpg" alt="Revista Aura — Portada Néctar (Botanical Couture)">
         </div>
         <div class="work-cover-footer">
           <span class="work-tag-capsule">SPECIAL ISSUE</span>
           <span class="work-year-tag">2026</span>
-        </div>
-      </article>
-
-      <!-- Portada 4: SABLE -->
-      <article class="work-card card-black" onclick="openCoverModal('SABLE', 'Noir Editorial & Minimalist Fashion', 'cover_sable.jpg', '2025', 'CAMPAÑA · ART DIRECTION')">
-        <div class="work-cover-header">
-          <span class="work-magazine-title">SABLE</span>
-        </div>
-        <div class="work-cover-image-box">
-          <img src="cover_sable.jpg" alt="Portada Sable — Cinematografía y Moda">
-        </div>
-        <div class="work-cover-footer">
-          <span class="work-tag-capsule">ART DIRECTION</span>
-          <span class="work-year-tag">2025</span>
         </div>
       </article>
     </div>
@@ -2034,7 +2280,7 @@
             <p class="quote-box-text">"Laura es una mente creativa brillante y una aliada estratégica vital. Su trabajo eleva cada marca a una categoría superior."</p>
             <div>
               <div class="quote-box-author">— Alexandra Bond</div>
-              <div class="quote-box-title">CEO, AUREA MEDIA</div>
+              <div class="quote-box-title">CEO, AURA MEDIA</div>
             </div>
           </div>
 
@@ -2076,8 +2322,11 @@
             JUNTOS.
           </h2>
 
-          <p style="font-family: var(--font-mono); font-size: 0.76rem; color: var(--ink-muted); margin-top: 16px; text-transform: uppercase;">
-            «Cada portada, una declaración de estilo.»
+          <p style="font-family: var(--font-serif); font-size: 1.15rem; font-style: italic; color: var(--crimson-editorial); margin-top: 16px;">
+            «La moda que cuenta historias.»
+          </p>
+          <p style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-muted); margin-top: 4px; text-transform: uppercase;">
+            Laura Ramos Ibáñez · Editora jefe de la revista Aura
           </p>
         </div>
 
@@ -2088,13 +2337,13 @@
             <span>→</span>
           </button>
           
-          <a href="https://wa.me/34600000000?text=Hola%20Laura,%20te%20contacto%20desde%20tu%20tarjeta%20digital." 
+          <a href="https://wa.me/34600000008?text=Hola%20Laura,%20te%20contacto%20desde%20tu%20tarjeta%20digital." 
              target="_blank" rel="noopener noreferrer" class="btn-contact-pill">
             <span>💬 WHATSAPP DIRECTO</span>
-            <span>+34 600...</span>
+            <span>+34 600 000 008</span>
           </a>
 
-          <a href="tel:+34600000000" class="btn-contact-pill">
+          <a href="tel:+34600000008" class="btn-contact-pill">
             <span>📞 LLAMAR POR TELÉFONO</span>
             <span>DIRECTO</span>
           </a>
@@ -2103,6 +2352,11 @@
             <span>📱 MOSTRAR CÓDIGO QR</span>
             <span>ESCANEAR</span>
           </button>
+
+          <a href="https://auramagazine.es" target="_blank" rel="noopener" class="btn-contact-pill">
+            <span>🌐 REVISTA AURA OFICIAL</span>
+            <span>AURAMAGAZINE.ES ↗</span>
+          </a>
         </div>
       </div>
 
@@ -2126,6 +2380,7 @@
               <option value="Dirección Editorial">Dirección Editorial & Portadas</option>
               <option value="Identidad Visual de Moda">Identidad Visual & Alta Costura</option>
               <option value="Campaña & Shooting">Campaña Creativa & Shooting</option>
+              <option value="Colaboración Revista Aura">Colaboración Revista Aura</option>
               <option value="Consultoría Editorial">Consultoría Estratégica</option>
               <option value="Otro">Otro Proyecto</option>
             </select>
@@ -2137,7 +2392,7 @@
           </div>
 
           <button type="submit" class="btn-form-submit">
-            <span>ENVIAR MENSAJE</span>
+            <span>ENVIAR MENSAJE A LAURA</span>
             <span>→</span>
           </button>
         </form>
@@ -2148,33 +2403,33 @@
         <div>
           <div class="crimson-card-header">
             <div>SEDE EN MADRID & PARÍS</div>
-            <div>PROYECTOS A NIVEL GLOBAL</div>
+            <div>REVISTA AURA · GLOBAL</div>
           </div>
 
           <div class="crimson-contact-details">
-            <a href="mailto:lauraramos@aurearev.com">lauraramos@aurearev.com</a>
-            <a href="tel:+34600000000">+34 600 000 000</a>
-            <a href="https://www.aurearev.com" target="_blank" rel="noopener">www.aurearev.com</a>
+            <a href="mailto:laura.ramos@auramagazine.es">laura.ramos@auramagazine.es</a>
+            <a href="tel:+34600000008">+34 600 000 008</a>
+            <a href="https://auramagazine.es" target="_blank" rel="noopener">auramagazine.es</a>
           </div>
 
           <div class="crimson-social-links">
-            <a href="https://instagram.com/laura_revaurea" target="_blank" rel="noopener">
+            <a href="https://instagram.com/lauraramos.aura" target="_blank" rel="noopener">
               <span>INSTAGRAM</span>
-              <span>↗</span>
+              <span>@lauraramos.aura ↗</span>
             </a>
-            <a href="https://www.linkedin.com/in/laurarevaurea" target="_blank" rel="noopener">
+            <a href="https://www.linkedin.com/in/lauraramosibanez" target="_blank" rel="noopener">
               <span>LINKEDIN</span>
-              <span>↗</span>
+              <span>in/lauraramosibanez ↗</span>
             </a>
-            <a href="https://www.aurearev.com" target="_blank" rel="noopener">
-              <span>REVISTA AUREA</span>
-              <span>↗</span>
+            <a href="https://auramagazine.es" target="_blank" rel="noopener">
+              <span>REVISTA AURA</span>
+              <span>auramagazine.es ↗</span>
             </a>
           </div>
         </div>
 
         <div class="sticker-open-ideas">
-          SIEMPRE ABIERTA A NUEVAS PROPUESTAS EDITORIALES
+          TARJETA OFICIAL · REVISTA AURA · 2026
         </div>
       </div>
     </div>
@@ -2183,8 +2438,8 @@
   <!-- PIE DE PÁGINA (FOOTER NEGRO) -->
   <footer class="editorial-footer">
     <div class="footer-inner">
-      <div class="footer-brand">LAURA RAMOS — EDITORA JEFE AUREA</div>
-      <div>© 2026 LAURA RAMOS. TODOS LOS DERECHOS RESERVADOS.</div>
+      <div class="footer-brand">LAURA RAMOS IBÁÑEZ — EDITORA JEFE REVISTA AURA</div>
+      <div>© 2026 LAURA RAMOS IBÁÑEZ · TARJETA DE CONTACTO DIGITAL OFICIAL</div>
       <div class="footer-links">
         <a href="#inicio">SUBIR ↑</a>
         <a href="javascript:void(0)" onclick="shareProfile()">COMPARTIR</a>
@@ -2203,14 +2458,14 @@
       <span>GUARDAR CONTACTO</span>
     </button>
 
-    <a href="https://wa.me/34600000000?text=Hola%20Laura,%20te%20contacto%20desde%20tu%20tarjeta%20digital." 
+    <a href="https://wa.me/34600000008?text=Hola%20Laura,%20te%20contacto%20desde%20tu%20tarjeta%20digital." 
        target="_blank" rel="noopener noreferrer" class="dock-icon-btn" title="Chat de WhatsApp">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
         <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
       </svg>
     </a>
 
-    <a href="tel:+34600000000" class="dock-icon-btn" title="Llamar a Laura">
+    <a href="tel:+34600000008" class="dock-icon-btn" title="Llamar a Laura">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
       </svg>
@@ -2241,22 +2496,28 @@
     <div class="editorial-modal-box">
       <button class="modal-close-btn" id="modal-close-btn" aria-label="Cerrar modal">&times;</button>
       <div style="font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--crimson-editorial); margin-bottom: 8px;">
-        / ESCANEAR TARJETA DIGITAL
+        / TARJETA DE CONTACTO DIGITAL OFICIAL
       </div>
-      <h3 style="font-family: var(--font-display); font-size: 2.2rem; line-height: 1; letter-spacing: 0.04em;">LAURA RAMOS</h3>
-      <p style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-muted); margin-top: 4px;">EDITORA JEFE DE AUREA</p>
+      <h3 style="font-family: var(--font-display); font-size: 2.2rem; line-height: 1; letter-spacing: 0.04em;">LAURA RAMOS IBÁÑEZ</h3>
+      <p style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-muted); margin-top: 4px;">EDITORA JEFE DE LA REVISTA AURA</p>
+      <p style="font-family: var(--font-serif); font-size: 0.95rem; font-style: italic; color: var(--crimson-editorial); margin-top: 4px;">«La moda que cuenta historias.»</p>
 
       <div class="qr-frame-box" id="qr-code-target">
         <!-- Renderizado dinámico vía QR Server -->
       </div>
 
       <p style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--ink-muted); margin-bottom: 16px;">
-        Apunta con la cámara de tu teléfono para abrir esta tarjeta instantáneamente.
+        Apunta con la cámara de tu teléfono para abrir y guardar esta tarjeta instantáneamente.
       </p>
 
-      <button class="btn-contact-pill" id="btn-copy-card-link" style="width: 100%; justify-content: center;">
-        <span>COPIAR ENLACE DE LA TARJETA</span>
-      </button>
+      <div style="display:flex; flex-direction:column; gap:8px;">
+        <button class="btn-contact-pill btn-vcard-highlight" onclick="downloadVCard()" style="width: 100%; justify-content: center;">
+          <span>💾 DESCARGAR CONTACTO (VCARD)</span>
+        </button>
+        <button class="btn-contact-pill" id="btn-copy-card-link" style="width: 100%; justify-content: center;">
+          <span>🔗 COPIAR ENLACE DE LA TARJETA</span>
+        </button>
+      </div>
     </div>
   </div>
 
@@ -2272,10 +2533,10 @@
         <img id="modal-cover-img" src="" alt="Portada" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
 
-      <div style="display: flex; justify-content: space-between; align-items: center;">
-        <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-muted);">DIRECCIÓN EDITORIAL: LAURA RAMOS</span>
-        <a href="https://www.aurearev.com" target="_blank" rel="noopener" class="btn-nav-action" style="text-decoration:none;">
-          VER EN AUREA →
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+        <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-muted);">REVISTA AURA · DIR. EDITORIAL: LAURA RAMOS IBÁÑEZ</span>
+        <a href="https://auramagazine.es" target="_blank" rel="noopener" class="btn-nav-action" style="text-decoration:none;">
+          VER EN REVISTA AURA →
         </a>
       </div>
     </div>
@@ -2288,21 +2549,24 @@
 
   <!-- JAVASCRIPT: LÓGICA DE VCARD, QR, MODALES Y ACCIONES -->
   <script>
-    // DATOS DE CONTACTO OFICIALES DE LAURA RAMOS (AUREA)
+    // DATOS DE CONTACTO OFICIALES DE LAURA RAMOS IBÁÑEZ (REVISTA AURA)
     const CONTACT_DATA = {
-      fullName: "Laura Ramos",
+      fullName: "Laura Ramos Ibáñez",
       firstName: "Laura",
-      lastName: "Ramos",
-      organization: "AUREA Magazine",
-      title: "Editora jefe de AUREA",
-      phone: "+34600000000",
-      phoneFormatted: "+34 600 000 000",
-      email: "lauraramos@aurearev.com",
-      website: "https://www.aurearev.com",
-      instagram: "https://instagram.com/laura_revaurea",
-      linkedin: "https://www.linkedin.com/in/laurarevaurea",
+      lastName: "Ramos Ibáñez",
+      organization: "Revista Aura",
+      title: "Editora jefe de la revista Aura",
+      phone: "+34600000008",
+      phoneFormatted: "+34 600 000 008",
+      email: "laura.ramos@auramagazine.es",
+      website: "https://auramagazine.es",
+      websiteFormatted: "auramagazine.es",
+      instagram: "https://instagram.com/lauraramos.aura",
+      instagramHandle: "@lauraramos.aura",
+      linkedin: "https://www.linkedin.com/in/lauraramosibanez",
+      linkedinHandle: "linkedin.com/in/lauraramosibanez",
       address: "Madrid — París",
-      note: "Cada portada, una declaración de estilo. Dirección editorial, estrategia de marca y alta costura."
+      note: "La moda que cuenta historias. Dirección editorial, estrategia de marca y alta costura."
     };
 
     // FUNCIÓN TOAST DE FEEDBACK
@@ -2321,11 +2585,11 @@
       const vcardContent = [
         'BEGIN:VCARD',
         'VERSION:3.0',
-        `N:${CONTACT_DATA.lastName};${CONTACT_DATA.firstName};;;`,
-        `FN:${CONTACT_DATA.fullName}`,
-        `ORG:${CONTACT_DATA.organization}`,
-        `TITLE:${CONTACT_DATA.title}`,
-        `TEL;TYPE=CELL,VOICE:${CONTACT_DATA.phone}`,
+        `N:Ramos Ibáñez;Laura;;;`,
+        `FN:Laura Ramos Ibáñez`,
+        `ORG:Revista Aura`,
+        `TITLE:Editora jefe de la revista Aura`,
+        `TEL;TYPE=CELL,VOICE,PREF:${CONTACT_DATA.phone}`,
         `EMAIL;TYPE=PREF,INTERNET:${CONTACT_DATA.email}`,
         `URL;TYPE=WORK:${CONTACT_DATA.website}`,
         `X-SOCIALPROFILE;type=instagram:${CONTACT_DATA.instagram}`,
@@ -2339,7 +2603,7 @@
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
-      link.download = `Laura_Ramos_AUREA.vcf`;
+      link.download = `Laura_Ramos_Ibanez_Revista_Aura.vcf`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -2349,14 +2613,18 @@
     }
 
     // EVENTOS PARA GUARDAR VCARD
-    document.getElementById('btn-save-vcard-main').addEventListener('click', downloadVCard);
-    document.getElementById('dock-btn-save').addEventListener('click', downloadVCard);
+    const heroBtnVcard = document.getElementById('hero-btn-vcard-save');
+    if (heroBtnVcard) heroBtnVcard.addEventListener('click', downloadVCard);
+    const mainBtnVcard = document.getElementById('btn-save-vcard-main');
+    if (mainBtnVcard) mainBtnVcard.addEventListener('click', downloadVCard);
+    const dockBtnVcard = document.getElementById('dock-btn-save');
+    if (dockBtnVcard) dockBtnVcard.addEventListener('click', downloadVCard);
 
     // SISTEMA DE COMPARTIR NATIVO O COPIAR ENLACE
     async function shareProfile() {
       const shareData = {
         title: `${CONTACT_DATA.fullName} — ${CONTACT_DATA.title}`,
-        text: `Tarjeta de presentación de Laura Ramos (${CONTACT_DATA.organization}): "${CONTACT_DATA.note}"`,
+        text: `Tarjeta de contacto digital de Laura Ramos Ibáñez (${CONTACT_DATA.organization}): "${CONTACT_DATA.note}"`,
         url: window.location.href
       };
 
@@ -2412,12 +2680,12 @@
       qrModal.classList.remove('active');
     }
 
-    btnNavQr.addEventListener('click', openQrModal);
-    btnDockQr.addEventListener('click', openQrModal);
-    btnMainQr.addEventListener('click', openQrModal);
-    btnOpenSeal.addEventListener('click', openQrModal);
-    btnCloseQr.addEventListener('click', closeQrModal);
-    btnCopyLink.addEventListener('click', copyCurrentUrl);
+    if (btnNavQr) btnNavQr.addEventListener('click', openQrModal);
+    if (btnDockQr) btnDockQr.addEventListener('click', openQrModal);
+    if (btnMainQr) btnMainQr.addEventListener('click', openQrModal);
+    if (btnOpenSeal) btnOpenSeal.addEventListener('click', openQrModal);
+    if (btnCloseQr) btnCloseQr.addEventListener('click', closeQrModal);
+    if (btnCopyLink) btnCopyLink.addEventListener('click', copyCurrentUrl);
 
     qrModal.addEventListener('click', (e) => {
       if (e.target === qrModal) closeQrModal();
@@ -2428,7 +2696,7 @@
       const currentUrl = encodeURIComponent(window.location.href);
       const img = document.createElement('img');
       img.src = `https://api.qrserver.com/v1/create-qr-code/?size=180x180&margin=4&data=${currentUrl}`;
-      img.alt = 'Código QR oficial de la tarjeta de Laura Ramos';
+      img.alt = 'Código QR oficial de la tarjeta de Laura Ramos Ibáñez';
       img.width = 180;
       img.height = 180;
       img.style.display = 'block';
@@ -2471,7 +2739,7 @@
       }
     });
 
-    // GESTIÓN DEL FORMULARIO EDITORIAL (SIMULACIÓN ELEGANTE CON REDIRECCIÓN A EMAIL/WHATSAPP)
+    // GESTIÓN DEL FORMULARIO EDITORIAL
     document.getElementById('editorial-contact-form').addEventListener('submit', (e) => {
       e.preventDefault();
       const name = document.getElementById('form-name').value;
@@ -2479,12 +2747,12 @@
       const project = document.getElementById('form-project').value;
       const message = document.getElementById('form-message').value;
 
-      const subject = encodeURIComponent(`Contacto de ${name} — ${project}`);
+      const subject = encodeURIComponent(`Contacto de ${name} — ${project} (Revista Aura)`);
       const body = encodeURIComponent(
-        `Hola Laura,\n\nSoy ${name} (${email}).\nMe pongo en contacto contigo para una colaboración en: ${project}.\n\nDetalles del proyecto:\n${message}\n\nUn cordial saludo.`
+        `Hola Laura,\n\nSoy ${name} (${email}).\nMe pongo en contacto contigo a través de tu tarjeta digital para una colaboración en: ${project}.\n\nDetalles del proyecto:\n${message}\n\nUn cordial saludo.`
       );
 
-      showToast('✓ Redactando mensaje para Laura Ramos...');
+      showToast('✓ Redactando mensaje para Laura Ramos Ibáñez...');
 
       setTimeout(() => {
         window.location.href = `mailto:${CONTACT_DATA.email}?subject=${subject}&body=${body}`;
