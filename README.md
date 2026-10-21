@@ -34,12 +34,8 @@ Tarjeta de contacto digital y portafolio web editorial inspirado en el diseño d
 3. **Manifiesto (Bloque Negro)**: Filosofía editorial, titular de gran escala y sello vintage giratorio de imprenta (`REVISTA AURA · LA MODA QUE CUENTA HISTORIAS · 2026`).
 4. **Servicios (`/ SERVICIOS EDITORIALES`)**: Retícula de 4 columnas (Dirección Editorial, Identidad Visual, Creative Direction, Experiencia Digital).
 5. **Especialidades & Disciplinas (`/ ESPECIALIDADES & DISCIPLINA`)**: Tipografías apiladas, barras de porcentaje minimalistas y bloque terracota con asterisco `✱` y nota adhesiva *"Ideas que conmueven a las personas"*.
-6. **Portadas Seleccionadas (`/ EDICIONES & PORTADAS — REVISTA AURA`)**:
-   - `NOIR EDITORIAL` — **Última Portada** destacada de Revista Aura (Issue Nº 12, Blanco y Negro).
-   - `AURA` — The Architecture of Style (Edición especial de colección).
-   - `RITUÁL` — Alta costura escultural (Carmesí).
-   - `NÉCTAR` — Edición botánica y esencia oscura.
-   - Cada portada es interactiva con visor modal en alta resolución y enlace a [auramagazine.es](https://auramagazine.es).
+6. **Última Portada (`/ ÚLTIMA PORTADA — REVISTA AURA`)**:
+   - `NOIR EDITORIAL` — **Última Portada** monográfica y destacada de Revista Aura (Issue Nº 12, Blanco y Negro). Presentada con ficha técnica editorial, créditos de dirección de Laura Ramos Ibáñez, visor modal en alta resolución y enlace a [auramagazine.es](https://auramagazine.es).
 7. **Prensa & Testimonios (`/ PRENSA & TESTIMONIOS`)**: Crítica editorial de *It's Nice That*, logotipos de cabeceras (*Vogue, Wallpaper\*, Landor, Frame, Monocle*) y reseñas de la industria (Alexandra Bond - CEO Aura Media, Jonas Wolff, Marta Silva).
 8. **Contacto Directo (`/ CONTACTO DIRECTO & COLABORACIONES`)**: Acceso directo a WhatsApp, llamada telefónica, descarga de vCard oficial (`Laura_Ramos_Ibanez_Revista_Aura.vcf`), visualizador de Código QR y formulario editorial de colaboración.
 9. **Dock Flotante Permanente**: Barra inferior de accesos rápidos para guardar el contacto en la agenda del móvil y escanear el QR en eventos presenciales.
